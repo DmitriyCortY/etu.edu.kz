@@ -1,0 +1,48 @@
+.b-checkbox {
+    display: inline-flex;
+    max-width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.b-checkbox__input {
+    display: none;
+    &:checked {
+        &~.b-checkbox__rect {
+            &:after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.b-checkbox__rect {
+    width: 13px;
+    height: 13px;
+    position: relative;
+    border: 1px solid $accentColor;
+    overflow: hidden;
+    @include after {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 7px;
+        height: 7px;
+        @include bg-grad(150deg);
+        opacity: 0;
+        transition: $t;
+        transform: scale(2);
+        transform-origin: center;
+    }
+    margin-right: 10px;
+}
+
+.b-checkbox__text {
+    @include tizer();
+    margin-top: 2px;
+    width: calc(100% - 13px - 10px);
+    user-select: none;
+}
+
+//

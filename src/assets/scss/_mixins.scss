@@ -1,0 +1,518 @@
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@mixin flex-colm() {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin xl() {
+    @media screen and (max-width: $br1600) {
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media screen and (max-width: $br1440) {
+        @content;
+    }
+}
+
+@mixin lg() {
+    @media screen and (max-width: $br1170) {
+        @content;
+    }
+}
+
+@mixin md() {
+    @media screen and (max-width: $br960) {
+        @content;
+    }
+}
+
+@mixin sm() {
+    @media screen and (max-width: $br780) {
+        @content;
+    }
+}
+
+@mixin xs() {
+    @media screen and (max-width: $br560) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media screen and (max-width: $br440) {
+        @content;
+    }
+}
+
+@mixin from($min_width) {
+    @media screen and (min-width: $min_width) {
+        @content;
+    }
+}
+
+@mixin to($max_width) {
+    @media screen and (max-width: $max_width) {
+        @content;
+    }
+}
+
+@mixin inh() {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+@mixin p {
+    padding-left: $p;
+    padding-right: $p;
+    @include xl {
+        padding-left: $p-m;
+        padding-right: $p-m;
+    }
+    @include lg {
+        padding-left: $p-s;
+        padding-right: $p-s;
+    }
+}
+
+@mixin p-full {
+    padding: $p;
+    @include xl {
+        padding: $p-m;
+    }
+    @include lg {
+        padding: $p-s;
+    }
+}
+
+@mixin p-l {
+    padding-left: $p;
+    @include xl {
+        padding-left: $p-m;
+    }
+    @include lg {
+        padding-left: $p-s;
+    }
+}
+
+@mixin p-r {
+    padding-right: $p;
+    @include xl {
+        padding-right: $p-m;
+    }
+    @include lg {
+        padding-right: $p-s;
+    }
+}
+
+@mixin p-t {
+    padding-top: $p;
+    @include xl {
+        padding-top: $p-m;
+    }
+    @include lg {
+        padding-top: $p-s;
+    }
+}
+
+@mixin p-b {
+    padding-bottom: $p;
+    @include xl {
+        padding-bottom: $p-m;
+    }
+    @include lg {
+        padding-bottom: $p-s;
+    }
+}
+
+@mixin m {
+    margin-left: $p;
+    margin-right: $p;
+    @include xl {
+        margin-left: $p-m;
+        margin-right: $p-m;
+    }
+    @include lg {
+        margin-left: $p-s;
+        margin-right: $p-s;
+    }
+}
+
+@mixin m-full {
+    padding: $m;
+    @include xl {
+        padding: $m-m;
+    }
+    @include lg {
+        padding: $m-s;
+    }
+}
+
+@mixin m-l {
+    margin-left: $p;
+    @include xl {
+        margin-left: $p-m;
+    }
+    @include lg {
+        margin-left: $p-s;
+    }
+}
+
+@mixin m-r {
+    margin-right: $p;
+    @include xl {
+        margin-right: $p-m;
+    }
+    @include lg {
+        margin-right: $p-s;
+    }
+}
+
+@mixin m-t {
+    margin-top: $p;
+    @include xl {
+        margin-top: $p-m;
+    }
+    @include lg {
+        margin-top: $p-s;
+    }
+}
+
+@mixin m-b {
+    margin-bottom: $p;
+    @include xl {
+        margin-bottom: $p-m;
+    }
+    @include lg {
+        margin-bottom: $p-s;
+    }
+}
+
+@mixin fz($fz, $lh: $fz) {
+    font-size: $fz;
+    line-height: $lh;
+}
+
+// 
+// grid
+@mixin wrapper {
+    max-width: calc((100% / 8) * 6 - 30px);
+    margin-left: calc((100% / 8) * 1 + 15px);
+    margin-right: calc((100% / 8) * 1 + 15px);
+    padding-left: $p;
+    padding-right: $p;
+    @include xl {
+        max-width: calc(100% - 120px);
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    @include laptop {
+        max-width: calc(100% - 80px);
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    @include lg {
+        max-width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    @include md {
+        padding-left: #{$p-m};
+        padding-right: #{$p-m};
+    }
+    @include xs {
+        max-width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: #{$p-s};
+        padding-right: #{$p-s};
+    }
+}
+
+@mixin row {
+    width: calc(100% + #{$p * 2});
+    margin-left: #{$p * -1};
+    margin-right: #{$p * -1};
+    @include md {
+        width: calc(100% + #{$p-m * 2});
+        margin-left: #{$p-m * -1};
+        margin-right: #{$p-m * -1};
+    }
+    @include xs {
+        width: calc(100% + #{$p-s * 2});
+        margin-left: #{$p-s * -1};
+        margin-right: #{$p-s * -1};
+    }
+}
+
+@mixin col($n) {
+    width: 100%;
+    max-width: calc(((100% / 6) * #{$n}) - #{$p * 2});
+    margin: #{$p};
+}
+
+@mixin col-xl($n) {
+    @include xl {
+        width: 100%;
+        max-width: calc(((100% / 6) * #{$n}) - #{$p * 2});
+        margin: #{$p};
+    }
+}
+
+@mixin col-laptop($n) {
+    @include laptop {
+        width: 100%;
+        max-width: calc(((100% / 6) * #{$n}) - #{$p * 2});
+        margin: #{$p};
+    }
+}
+
+@mixin col-lg($n) {
+    @include lg {
+        width: 100%;
+        max-width: calc(((100% / 6) * #{$n}) - #{$p * 2});
+        margin: #{$p};
+    }
+}
+
+@mixin col-md($n) {
+    @include md {
+        width: 100%;
+        max-width: calc(((100% / 4) * #{$n}) - #{$p-m * 2});
+        margin: #{$p-m};
+    }
+}
+
+@mixin col-sm($n) {
+    @include sm {
+        width: 100%;
+        max-width: calc(((100% / 4) * #{$n}) - #{$p-m * 2});
+        margin: #{$p-m};
+    }
+}
+
+@mixin col-xs($n) {
+    @include xs {
+        width: 100%;
+        max-width: calc(((100% / 2) * #{$n}) - #{$p-s * 2});
+        margin: #{$p-s};
+    }
+}
+
+@mixin col-mobile($n) {
+    @include mobile {
+        width: 100%;
+        max-width: calc(((100% / 2) * #{$n}) - #{$p-s * 2});
+        margin: #{$p-s};
+    }
+}
+
+@mixin inner-full {
+    width: calc(100% + #{$p * 2});
+    margin-left: #{$p * -1};
+    margin-right: #{$p * -1};
+    @include md {
+        width: calc(100% + #{$p-m * 2});
+        margin-left: #{$p-m * -1};
+        margin-right: #{$p-m * -1};
+    }
+    @include xs {
+        width: calc(100% + #{$p-s * 2});
+        margin-left: #{$p-s * -1};
+        margin-right: #{$p-s * -1};
+    }
+}
+
+@mixin inner-left {
+    width: calc(100% + #{$p});
+    margin-left: #{$p * -1};
+    @include md {
+        width: calc(100% + #{$p-m});
+        margin-left: #{$p-m * -1};
+    }
+    @include xs {
+        width: calc(100% + #{$p-s});
+        margin-left: #{$p-s * -1};
+    }
+}
+
+@mixin inner-right {
+    width: calc(100% + #{$p});
+    margin-right: #{$p * -1};
+    @include md {
+        width: calc(100% + #{$p-m});
+        margin-right: #{$p-m * -1};
+    }
+    @include xs {
+        width: calc(100% + #{$p-s});
+        margin-right: #{$p-s * -1};
+    }
+}
+
+// 
+// text
+@mixin title-section() {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
+}
+
+@mixin title-main-cover() {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+@mixin title-section-cover() {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+@mixin title-m() {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+@mixin title-sm() {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@mixin title-xs() {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+@mixin list-item() {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+@mixin standard-text() {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 26px;
+}
+
+@mixin button-text() {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@mixin tizer() {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+}
+
+@mixin tizer-xs() {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@mixin input-hint() {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 16px;
+}
+
+// grad
+@mixin bg-grad($dir, $c1: $gc1, $c2: $gc2) {
+    background: linear-gradient($dir, $c1, $c2);
+}
+
+@mixin text-grad($dir, $c1: $gc1, $c2: $gc2) {
+    @supports not (-ms-ime-align: auto) {
+        background: linear-gradient($dir, $c1, $c2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    @supports (-ms-ime-align:auto) {
+        color: $accentColor;
+    }
+}
+
+// 
+// pseudo
+@mixin before($c: '') {
+    &:before {
+        content: $c;
+        @content;
+    }
+}
+
+@mixin after($c: '') {
+    &:after {
+        content: $c;
+        @content;
+    }
+}
+
+// hover
+@mixin hover() {
+    transition: $t;
+    &:hover {
+        @content;
+    }
+}
+
+// line
+@mixin line-grad() {
+    position: relative;
+    @include p-l;
+    @include before() {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include bg-grad(175deg);
+    }
+}
+
+@mixin line-dark() {
+    position: relative;
+    @include p-l;
+    @include before() {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $darkColor;
+    }
+}
+
+@mixin line-light() {
+    position: relative;
+    @include p-l;
+    @include before() {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $lightColor;
+    }
+}

@@ -1,0 +1,47 @@
+// Own-import
+@import "_var.scss";
+@import "_mixins.scss";
+@import "_tags.scss";
+@import "_glob-modifiers.scss";
+@import "_temp.scss";
+@import "_fonts.scss";
+@import "simple/**/*.scss";
+@import "components/**/*.scss";
+@import "sections/**/*.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $firstFont;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: unset;
+}
+
+@include from(960px) {
+     ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color: $lightColor;
+        border-radius: 2px;
+    }
+     ::-webkit-scrollbar-thumb {
+        background: $darkColor;
+        border-radius: 2px;
+    }
+}
+
+::selection {
+    background-color: $darkColor;
+    color: $lightColor;
+}
+
+[data-fancybox] {
+    cursor: zoom-in;
+}

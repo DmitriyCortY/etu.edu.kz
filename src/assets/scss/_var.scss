@@ -1,0 +1,43 @@
+// offsets
+// 1920 - 960
+$p: 20px;
+// ------ //
+// 960 - 560
+$p-m: 15px;
+// ------ //
+// 560 - 320
+$p-s: 10px;
+// ------ //
+// 1920 - 960
+$m: 20px;
+// ------ //
+// 960 - 560
+$m-m: 15px;
+// ------ //
+// 560 - 320
+$m-s: 10px;
+// 
+// breakpoints
+$br1600: 1600px;
+$br1440: 1440px;
+$br1170: 1170px;
+$br960: 960px;
+$br780: 780px;
+$br560: 560px;
+$br440: 440px;
+// 
+// 
+// colors
+$darkColor: #000000;
+$lightColor: #ffffff;
+$gc1: #6C55FF;
+$gc2: #163CB7;
+$accentColor: #3E48D8;
+// 
+// fonts
+$firstFont: 'Montserrat',
+sans-serif;
+;
+// 
+// transition
+$t: all 0.4s linear;

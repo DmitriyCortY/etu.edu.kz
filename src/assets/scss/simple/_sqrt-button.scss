@@ -1,0 +1,35 @@
+.b-sqrt-button {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    @include bg-grad(140deg);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include hover {
+        & .b-button-text-arrow__icon {
+            background-size: 200%, 100%;
+        }
+        opacity: 0.9;
+    }
+    &.disable {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+.b-sqrt-button__icon {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.b-sqrt-button__text {
+    margin-bottom: 2px;
+    margin-top: 2px;
+    @include fz(11px, 16px);
+    font-weight: 500;
+    color: $lightColor;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+.b-title-m {
+    @include title-m();
+}
+
+.b-title-m_line {
+    @include line-grad();
+}
+
+.b-title-m_dark {
+    color: $darkColor;
+}
+
+.b-title-m_light {
+    color: $lightColor;
+}
+
+.b-title-m_accent {
+    color: $accentColor;
+}
+
+.b-title-m span {
+    @include inh;
+}

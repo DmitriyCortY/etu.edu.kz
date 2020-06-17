@@ -1,0 +1,19 @@
+.b-title-section {
+    @include title-section();
+}
+
+.b-title-section_line {
+    @include line-grad();
+}
+
+.b-title-section_dark {
+    color: $darkColor;
+}
+
+.b-title-section_light {
+    color: $lightColor;
+}
+
+.b-title-section span {
+    @include inh;
+}

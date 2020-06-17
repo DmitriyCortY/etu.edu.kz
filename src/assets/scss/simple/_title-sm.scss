@@ -1,0 +1,23 @@
+.b-title-sm {
+    @include title-sm();
+}
+
+.b-title-sm_line {
+    @include line-grad();
+}
+
+.b-title-sm_dark {
+    color: $darkColor;
+}
+
+.b-title-sm_light {
+    color: $lightColor;
+}
+
+.b-title-sm_accent {
+    color: $accentColor;
+}
+
+.b-title-sm span {
+    @include inh;
+}

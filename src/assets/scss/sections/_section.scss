@@ -1,0 +1,34 @@
+.b-section {
+    position: relative;
+}
+
+.b-section_full {
+    & .b-section__inner {
+        @include wrapper;
+    }
+}
+
+// 
+// 
+// modifications
+.b-section_p-l {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.b-section_p-m {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.b-section_p-s {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+// modifications
+// 
+// 
+.b-section__inner {}
+
+.b-section__content {}

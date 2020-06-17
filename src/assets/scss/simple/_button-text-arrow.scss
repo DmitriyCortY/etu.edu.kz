@@ -1,0 +1,37 @@
+.b-button-text-arrow {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    @include hover {
+        & .b-button-text-arrow__icon {
+            background-size: 200%, 100%;
+        }
+        opacity: 0.9;
+    }
+    &.disable {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+.b-button-text-arrow__icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include bg-grad(140deg);
+    width: 50px;
+    height: 50px;
+    background-size: 100%, 100%;
+    transition: $t;
+}
+
+.b-button-text-arrow__text {
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include button-text();
+}

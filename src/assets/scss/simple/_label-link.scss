@@ -1,0 +1,23 @@
+.b-label-link {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.b-label-link_fw-600 {
+    & .b-label-link__content {
+        font-weight: 600;
+    }
+}
+
+.b-label-link__title {
+    @include p-l;
+    opacity: 0.4;
+    @include tizer();
+    margin-bottom: 5px;
+}
+
+.b-label-link__content {
+    display: inline-flex;
+    @include tizer-xs();
+    @include line-grad();
+}

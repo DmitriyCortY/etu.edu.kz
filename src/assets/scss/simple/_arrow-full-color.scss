@@ -1,0 +1,32 @@
+.b-arrow-full-color {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include bg-grad(140deg);
+    padding: 26px 22px;
+    cursor: pointer;
+    background-size: 100%, 100%;
+    @include hover {
+        background-size: 200%, 100%;
+        opacity: 0.9;
+    }
+    &.disable {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    color: $lightColor;
+}
+
+.b-arrow-full-color img {
+    margin-left: 45px;
+    @include sm {
+        margin-left: 30px;
+    }
+    @include xs {
+        margin-left: 18px;
+    }
+}
+
+.b-arrow-full-color span {
+    @include button-text();
+}

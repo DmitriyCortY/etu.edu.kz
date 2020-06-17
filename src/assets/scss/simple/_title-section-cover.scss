@@ -1,0 +1,19 @@
+.b-title-section-cover {
+    @include title-section-cover();
+}
+
+.b-title-section-cover_line {
+    @include line-grad();
+}
+
+.b-title-section-cover_dark {
+    color: $darkColor;
+}
+
+.b-title-section-cover_light {
+    color: $lightColor;
+}
+
+.b-title-section-cover span {
+    @include inh;
+}

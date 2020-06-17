@@ -1,0 +1,36 @@
+.b-pagination {}
+
+.b-pagination__list {
+    @include flex-row;
+    align-items: center;
+}
+
+.b-pagination__item {
+    @include button-text();
+    width: 25px;
+    height: 50px;
+    @include flex-row;
+    @include flex-center;
+    cursor: pointer;
+    &.active {
+        width: 50px;
+        color: $lightColor;
+        @include bg-grad(150deg);
+        cursor: default;
+        &:not(:last-child):not(:first-child) {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        &:last-child {
+            margin-left: 5px;
+        }
+        &:first-child {
+            margin-right: 5px;
+        }
+    }
+    &:not(.active) {
+        @include hover {
+            transform: translate3d(0, -3px, 0);
+        }
+    }
+}

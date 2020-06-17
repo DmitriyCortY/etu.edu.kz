@@ -1,0 +1,17 @@
+.b-accent-text-block {
+    position: relative;
+    width: 100%;
+    background: rgba(65, 73, 219, 0.04);
+    @include before {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        @include bg-grad(160deg);
+        top: 0;
+        left: 0;
+    }
+}
+
+.b-accent-text-block__text {
+    @include p-full;
+}

@@ -1,0 +1,26 @@
+.b-arrow-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include bg-grad(140deg);
+    padding: 26px 44px;
+    cursor: pointer;
+    background-size: 100%, 100%;
+    @include hover {
+        background-size: 200%, 100%;
+        opacity: 0.9;
+    }
+    &.disable {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+.b-arrow-button img {
+    width: 11px;
+    height: 22px;
+}
+
+.b-arrow-button_w-100 {
+    width: 100%;
+}

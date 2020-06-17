@@ -1,0 +1,32 @@
+.b-breadcrumbs {}
+
+.b-breadcrumbs__list {
+    @include flex-row;
+    @include line-grad;
+}
+
+.b-breadcrumbs__item {
+    position: relative;
+    @include flex-row;
+    @include flex-center;
+    @include p;
+    @include title-xs();
+    color: $accentColor;
+    &.disable {
+        opacity: 0.2;
+    }
+    &:first-child {
+        padding-left: 0 !important;
+    }
+    &:not(:first-child) {
+        @include before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 3px;
+            height: 3px;
+            background-color: $accentColor;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+}

@@ -1,0 +1,205 @@
+.b-row {
+    @include flex-row;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+        @include md {
+            margin-bottom: 15px;
+        }
+        @include xs {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.b-row_ai-center {
+    align-items: center;
+}
+
+.b-row_p {
+    @include row;
+}
+
+.b-col {}
+
+.b-col_6 {
+    @include col(6);
+}
+
+.b-col_5 {
+    @include col(5);
+}
+
+.b-col_4 {
+    @include col(4);
+}
+
+.b-col_3 {
+    @include col(3);
+}
+
+.b-col_3 {
+    @include col(3);
+}
+
+.b-col_2 {
+    @include col(2);
+}
+
+.b-col_1 {
+    @include col(1);
+}
+
+// 
+// xl max-6
+// 
+.b-col_xl-6 {
+    @include col-xl(6);
+}
+
+.b-col_xl-5 {
+    @include col-xl(5);
+}
+
+.b-col_xl-4 {
+    @include col-xl(4);
+}
+
+.b-col_xl-3 {
+    @include col-xl(3);
+}
+
+.b-col_xl-2 {
+    @include col-xl(2);
+}
+
+.b-col_xl-1 {
+    @include col-xl(1);
+}
+
+// 
+// laptop max-6
+// 
+.b-col_laptop-6 {
+    @include col-laptop(6);
+}
+
+.b-col_laptop-5 {
+    @include col-laptop(5);
+}
+
+.b-col_laptop-4 {
+    @include col-laptop(4);
+}
+
+.b-col_laptop-3 {
+    @include col-laptop(3);
+}
+
+.b-col_laptop-2 {
+    @include col-laptop(2);
+}
+
+.b-col_laptop-1 {
+    @include col-laptop(1);
+}
+
+// 
+// lg max-6
+// 
+.b-col_lg-6 {
+    @include col-lg(6);
+}
+
+.b-col_lg-5 {
+    @include col-lg(5);
+}
+
+.b-col_lg-4 {
+    @include col-lg(4);
+}
+
+.b-col_lg-3 {
+    @include col-lg(3);
+}
+
+.b-col_lg-2 {
+    @include col-lg(2);
+}
+
+.b-col_lg-1 {
+    @include col-lg(1);
+}
+
+// 
+// md - max-4
+// 
+.b-col_md-4 {
+    @include col-md(4);
+}
+
+.b-col_md-3 {
+    @include col-md(3);
+}
+
+.b-col_md-2 {
+    @include col-md(2);
+}
+
+.b-col_md-1 {
+    @include col-md(1);
+}
+
+// 
+// sm - max-4
+// 
+.b-col_sm-4 {
+    @include col-sm(4);
+}
+
+.b-col_sm-3 {
+    @include col-sm(3);
+}
+
+.b-col_sm-2 {
+    @include col-sm(2);
+}
+
+.b-col_sm-1 {
+    @include col-sm(1);
+}
+
+// 
+// xs - max-2
+// 
+.b-col_xs-2 {
+    @include col-xs(2);
+}
+
+.b-col_xs-1 {
+    @include col-xs(1);
+}
+
+// 
+// xs - max-2
+// 
+.b-col_mobile-2 {
+    @include col-mobile(2);
+}
+
+.b-col_mobile-1 {
+    @include col-mobile(1);
+}
+
+.b-col-inner {}
+
+.b-col-inner_full {
+    @include inner-full;
+}
+
+.b-col-inner_left {
+    @include inner-left;
+}
+
+.b-col-inner_right {
+    @include inner-right;
+}

@@ -1,0 +1,23 @@
+.b-title-xs {
+    @include title-xs();
+}
+
+.b-title-xs_line {
+    @include line-grad();
+}
+
+.b-title-xs_dark {
+    color: $darkColor;
+}
+
+.b-title-xs_light {
+    color: $lightColor;
+}
+
+.b-title-xs_accent {
+    color: $accentColor;
+}
+
+.b-title-xs span {
+    @include inh;
+}

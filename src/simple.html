@@ -1,0 +1,145 @@
+@@include('./html-view/head.html')
+<!--  -->
+@@include('./html-view/preloader.html')
+<!--  -->
+@@include('./html-view/lines.html')
+
+<section class="b-page">
+    @@include('./html-view/header.html')
+    <main class="b-main b-page__main" style="padding-right: 1px;">
+
+        <div class="b-section b-section_full b-section_p-m b-main__section">
+            <div class="b-section__inner">
+                <div class="b-section__content">
+                    <!-- content -->
+                    <div class="b-row">
+                        <div class="b-col b-col_2 b-col_md-2 b-col_xs-2">
+                            @@include('./html-view/simple/arrow-button.html', { "classes": "" })
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_2 b-col_md-2 b-col_xs-2">
+                            @@include('./html-view/simple/arrow-full-color.html', { "classes": "", "text": "Узнать больше" })
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_2 b-col_md-2 b-col_xs-2">
+                            @@include('./html-view/simple/button-text-arrow.html', { "classes": "", "text": "Узнать больше" })
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_2 b-col_md-2 b-col_xs-2">
+                            @@include('./html-view/simple/sqrt-button.html', { "classes": "", "text": "Скачать", "icon" : true })
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_2 b-col_md-2 b-col_xs-2">
+                            @@include('./html-view/simple/sqrt-button.html', { "classes": "", "text": "Текст кнопки!", "icon" : false })
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_3 b-col_md-2 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/label-link.html', { "classes": "", "title": "Email", "prefix": "mailto:", "link": "zhanar.temirbekova@etu.edu.kz" })
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_3 b-col_md-2 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/label-link.html', { "classes": "b-label-link_fw-600", "title": "Телефон", "prefix": "tel:", "link": "+7 (777) 829 00 11" })
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_3 b-col_md-2 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/title-section.html', { "classes": "b-title-section_dark b-title-section_line", "title": "Заголовок"})
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_3 b-col_md-2 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/title-section.html', { "classes": "b-title-section_dark b-title-section_line", "title": "Заголовок в @@include('./br.html') две строки"})
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_3 b-col_md-2 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/title-section-cover.html', { "classes": "b-title-section-cover_dark b-title-section-cover_line", "title": "Заголовок"})
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_3 b-col_md-2 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/title-m.html', { "classes": "b-title-m_dark b-title-m_line", "title": "Заголовок"})
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            @@include('./html-view/simple/title-cover.html', { "classes": "b-title-cover_with-icon b-title-cover_light", "title": "Заголовок", "icon": true, "icon-src": "./assets/img/icons/arrow-right-line.svg", "href": "#"})
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            @@include('./html-view/simple/pagination.html', { "classes": ""})
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/breadcrumbs.html', { "classes": ""})
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            @@include('./html-view/simple/title-m.html', { "classes": "b-title-m_accent", "title": "Пример разновидности заголовка 3"})
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            @@include('./html-view/simple/title-sm.html', { "classes": "b-title-sm_accent", "title": "Пример разновидности заголовка 2"})
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            @@include('./html-view/simple/title-xs.html', { "classes": "b-title-xs_accent", "title": "Пример разновидности заголовка 1"})
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            <ul>
+                                <li>
+                                    Пример элемента маркированного списка
+                                </li>
+                                <li>
+                                    Пример элемента маркированного списка
+                                </li>
+                                <li>
+                                    Пример элемента маркированного списка
+                                </li>
+                                <li>
+                                    Пример элемента маркированного списка
+                                </li>
+                            </ul>
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            @@include('./html-view/simple/checkbox.html', { "classes": "", "text": "Лейбл чекбокса (можно нажать, что бы отметить)", "checked": true})
+                            <!--  -->
+                            <br>
+                            <!--  -->
+                            @@include('./html-view/simple/checkbox.html', { "classes": "", "text": "Лейбл чекбокса (можно нажать, что бы отметить)", "checked": false})
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            @@include('./html-view/simple/p2.html'})
+                        </div>
+                        <!--  -->
+                        <div class="b-col b-col_6 b-col_md-4 b-col_xs-2">
+                            <div class="b-col-inner b-col-inner_full">
+                                @@include('./html-view/simple/accent-text-block.html', { "classes": "", "text": "@@include('./p2.html')"})
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- content -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+    @@include('./html-view/footer.html')
+</section>
+
+@@include('./html-view/modals.html')
+<!--  -->
+@@include('./html-view/script-include.html')
