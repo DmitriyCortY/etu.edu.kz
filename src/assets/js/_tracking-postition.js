@@ -11,14 +11,14 @@ new ItemTracking({
 
 */
 
-class ItemTracking{
+class ItemTracking {
     constructor(config) {
 
         this.trigger = $(config.trigger)
         this.callBack = config.callBack
         this.offset = parseInt(config.offset, 10) || 0
-        this.place =  $(document)
-		this.eventName = config.eventName || 'tracking-position-event'
+        this.place = $(document)
+        this.eventName = config.eventName || 'tracking-position-event'
         this.eventPlace = $('body')
 
         this.window = $(window)
@@ -43,14 +43,14 @@ class ItemTracking{
     }
 
     handlerScroll() {
-        
+
         this.place.on('scroll', () => {
-            
+
             if (this.calcPosition() <= 0) {
 
-                this.visibilityAction() 
+                this.visibilityAction()
             }
-            
+
         })
     }
 

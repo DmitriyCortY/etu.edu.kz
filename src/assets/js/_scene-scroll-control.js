@@ -10,10 +10,10 @@ new SceneScrollControl({
 class SceneScrollControl {
     constructor(config) {
 
-        this.scene      = $(config.scene)
-        this.tracking   = $(config.tracking)
-        this.saveState  = null
-        this.flag       = false
+        this.scene = $(config.scene)
+        this.tracking = $(config.tracking)
+        this.saveState = null
+        this.flag = false
 
         this.callHandler()
     }

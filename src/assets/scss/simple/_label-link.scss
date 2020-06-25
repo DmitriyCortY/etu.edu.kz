@@ -3,6 +3,12 @@
     flex-direction: column;
 }
 
+.b-label-link_dark {
+    & .b-label-link__content {
+        color: $darkColor;
+    }
+}
+
 .b-label-link_fw-600 {
     & .b-label-link__content {
         font-weight: 600;
@@ -14,10 +20,11 @@
     opacity: 0.4;
     @include tizer();
     margin-bottom: 5px;
+    color: $darkColor;
 }
 
 .b-label-link__content {
     display: inline-flex;
-    @include tizer-xs();
+    @include text-xs();
     @include line-grad();
 }

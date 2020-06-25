@@ -1,0 +1,62 @@
+.b-alert {}
+
+.b-alert_green {
+    border: 1px solid $greenColor;
+    & .b-alert__label {
+        color: $greenColor;
+    }
+    & .b-alert__icon {
+        background-color: $greenColor;
+    }
+}
+
+.b-alert_red {
+    border: 1px solid $redColor;
+    & .b-alert__label {
+        color: $redColor;
+    }
+    & .b-alert__icon {
+        background-color: $redColor;
+    }
+}
+
+.b-alert__inner {}
+
+.b-alert__row {
+    @include flex-row;
+}
+
+.b-alert__icon {
+    width: 50px;
+    @include flex-row;
+    @include flex-center;
+    padding: 10px;
+    & img {
+        display: block;
+    }
+}
+
+.b-alert__content {
+    width: calc(100% - 50px);
+    padding: 12px;
+    position: relative;
+}
+
+.b-alert__label {
+    @include fz(10px, 16px);
+    padding: 4px 8px;
+    background-color: #fafafa;
+    display: inline-block;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transform: translate3d(0, -50%, 0);
+}
+
+.b-alert__text {
+    @include standard-text;
+    & strong {
+        font-weight: 700;
+    }
+}

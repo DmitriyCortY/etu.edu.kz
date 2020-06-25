@@ -1,0 +1,32 @@
+.b-cta {
+    @include row;
+}
+
+.b-cta__inner {}
+
+.b-cta__row {
+    @include flex-row;
+}
+
+.b-cta__col {
+    width: 50%;
+    padding: 20px;
+    @include flex-colm;
+    justify-content: center;
+    @include sm {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.b-cta__col_grad {
+    @include bg-grad(160deg);
+}
+
+.b-cta__col_gray {
+    background: #f7f7fe;
+}
+
+.b-cta__title-sm {
+    margin-bottom: 10px;
+}

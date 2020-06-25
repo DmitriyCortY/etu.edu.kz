@@ -15,6 +15,26 @@
     }
 }
 
+.b-button-text-arrow_reverse {
+    & .b-button-text-arrow__icon {
+        order: 2;
+    }
+    & .b-button-text-arrow__text {
+        order: 1;
+    }
+}
+
+.b-button-text-arrow_icon-big {
+    & .b-button-text-arrow__icon {
+        width: 80px;
+        height: 80px;
+        & img {
+            width: 33px;
+            height: 16px;
+        }
+    }
+}
+
 .b-button-text-arrow__icon {
     display: flex;
     flex-direction: row;
@@ -25,6 +45,7 @@
     height: 50px;
     background-size: 100%, 100%;
     transition: $t;
+    padding: 10px;
 }
 
 .b-button-text-arrow__text {

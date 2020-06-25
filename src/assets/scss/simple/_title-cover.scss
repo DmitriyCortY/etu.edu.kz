@@ -1,6 +1,12 @@
 .b-title-cover {
     display: block;
     @include bg-grad(160deg);
+    height: 80px;
+    position: relative;
+}
+
+.b-title-cover_with-sqrt-button {
+    width: calc(100% - 80px);
 }
 
 .b-title-cover_dark {
@@ -41,4 +47,11 @@
         max-height: 10px;
         display: block;
     }
+}
+
+.b-title-cover__bg-text {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate3d(0, -50%, 0);
 }

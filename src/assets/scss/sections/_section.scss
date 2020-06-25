@@ -31,4 +31,36 @@
 // 
 .b-section__inner {}
 
-.b-section__content {}
+.b-section__content {
+    position: relative;
+}
+
+.b-section__bg-etu {
+    @include row;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+}
+
+.b-section__title-section {
+    @include m-b;
+}
+
+.b-section__about-university {
+    position: absolute;
+    width: calc(50% + 20px);
+    height: calc(100% - 40px);
+    left: -20px;
+    top: 20px;
+    background-color: #f7f8fe;
+    z-index: 0;
+    @include md {
+        width: calc(100% + 30px);
+        height: calc(100% - 30px);
+        left: -15px;
+        top: 15px;
+    }
+    @include sm {
+        display: none;
+    }
+}

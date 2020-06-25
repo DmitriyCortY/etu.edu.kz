@@ -1,4 +1,5 @@
-/* static hahahahah */ let __counterAlert = 0;
+/* static hahahahah */
+let __counterAlert = 0;
 
 //  ********* example *********
 // new TOT_alert({
@@ -23,7 +24,7 @@ class TOT_alert {
         this.place = config.place // jQuery.object
         this.icon = config.icon // (string) html
 
-        this.onInsert = config.onInsert || (() => { })
+        this.onInsert = config.onInsert || (() => {})
 
         this.createAlert(this.onInsert)
     }
@@ -83,11 +84,9 @@ class TOT_delete_alert {
     }
 
     deleteAlert(int) {
-        $('[data-alert="' + int + '"]').fadeOut("normal", function () {
+        $('[data-alert="' + int + '"]').fadeOut("normal", function() {
             $(this).remove();
         });
     }
 }
 new TOT_delete_alert()
-
-

@@ -1,0 +1,13 @@
+.b-card-text {}
+
+.b-card-text__inner {}
+
+.b-card-text__header {}
+
+.b-card-text__main {
+    @include p-full;
+}
+
+.b-card-text__footer {
+    @include p-full;
+}

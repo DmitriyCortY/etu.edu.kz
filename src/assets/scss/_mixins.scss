@@ -153,52 +153,52 @@
 }
 
 @mixin m-full {
-    padding: $m;
+    margin: $m;
     @include xl {
-        padding: $m-m;
+        margin: $m-m;
     }
     @include lg {
-        padding: $m-s;
+        margin: $m-s;
     }
 }
 
 @mixin m-l {
-    margin-left: $p;
+    margin-left: $m;
     @include xl {
-        margin-left: $p-m;
+        margin-left: $m-m;
     }
     @include lg {
-        margin-left: $p-s;
+        margin-left: $m-s;
     }
 }
 
 @mixin m-r {
-    margin-right: $p;
+    margin-right: $m;
     @include xl {
-        margin-right: $p-m;
+        margin-right: $m-m;
     }
     @include lg {
-        margin-right: $p-s;
+        margin-right: $m-s;
     }
 }
 
 @mixin m-t {
-    margin-top: $p;
+    margin-top: $m;
     @include xl {
-        margin-top: $p-m;
+        margin-top: $m-m;
     }
     @include lg {
-        margin-top: $p-s;
+        margin-top: $m-s;
     }
 }
 
 @mixin m-b {
-    margin-bottom: $p;
+    margin-bottom: $m;
     @include xl {
-        margin-bottom: $p-m;
+        margin-bottom: $m-m;
     }
     @include lg {
-        margin-bottom: $p-s;
+        margin-bottom: $m-s;
     }
 }
 
@@ -366,9 +366,13 @@
 // 
 // text
 @mixin title-section() {
-    font-weight: 300;
+    font-weight: 200;
     font-size: 48px;
     line-height: 59px;
+    @include xs {
+        font-size: 34px;
+        line-height: 42px;
+    }
 }
 
 @mixin title-main-cover() {
@@ -387,6 +391,10 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+    @include xs {
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
 
 @mixin title-sm() {
@@ -425,7 +433,7 @@
     line-height: 16px;
 }
 
-@mixin tizer-xs() {
+@mixin text-xs() {
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;

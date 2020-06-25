@@ -1,5 +1,6 @@
 .b-row {
     @include flex-row;
+    @include row;
     &:not(:last-child) {
         margin-bottom: 20px;
         @include md {
@@ -15,11 +16,156 @@
     align-items: center;
 }
 
+.b-row_jc-center {
+    justify-content: center;
+}
+
 .b-row_p {
-    @include row;
+    @include p;
+}
+
+.b-row_p-l {
+    @include p-l;
+}
+
+.b-row_p-r {
+    @include p-r;
+}
+
+.b-row_flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.b-row_flex-ai-center {
+    align-items: center;
+}
+
+.b-row_flex-ai-start {
+    align-items: flex-start;
+}
+
+.b-row_flex-ai-end {
+    align-items: flex-end;
+}
+
+.b-row_flex-jc-center {
+    justify-content: center;
+}
+
+.b-row_flex-jc-start {
+    justify-content: flex-start;
+}
+
+.b-row_flex-jc-end {
+    justify-content: flex-end;
+}
+
+.b-row_reverse {
+    flex-direction: row-reverse;
+}
+
+.b-row_xl-reverse {
+    @include xl {
+        flex-direction: row-reverse;
+    }
+}
+
+.b-row_laptop-reverse {
+    @include laptop {
+        flex-direction: row-reverse;
+    }
+}
+
+.b-row_lg-reverse {
+    @include lg {
+        flex-direction: row-reverse;
+    }
+}
+
+.b-row_md-reverse {
+    @include md {
+        flex-direction: row-reverse;
+    }
+}
+
+.b-row_sm-reverse {
+    @include sm {
+        flex-direction: row-reverse;
+    }
+}
+
+.b-row_xs-reverse {
+    @include xs {
+        flex-direction: row-reverse;
+    }
+}
+
+.b-row_mobile-reverse {
+    @include mobile {
+        flex-direction: row-reverse;
+    }
+}
+
+.b-row_non-reverse {
+    flex-direction: row;
+}
+
+.b-row_xl-non-reverse {
+    @include xl {
+        flex-direction: row;
+    }
+}
+
+.b-row_laptop-non-reverse {
+    @include laptop {
+        flex-direction: row;
+    }
+}
+
+.b-row_lg-non-reverse {
+    @include lg {
+        flex-direction: row;
+    }
+}
+
+.b-row_md-non-reverse {
+    @include md {
+        flex-direction: row;
+    }
+}
+
+.b-row_sm-non-reverse {
+    @include sm {
+        flex-direction: row;
+    }
+}
+
+.b-row_xs-non-reverse {
+    @include xs {
+        flex-direction: row;
+    }
+}
+
+.b-row_mobile-non-reverse {
+    @include mobile {
+        flex-direction: row;
+    }
 }
 
 .b-col {}
+
+.b-col_p {
+    @include p;
+}
+
+.b-col_p-l {
+    @include p-l;
+}
+
+.b-col_p-r {
+    @include p-r
+}
 
 .b-col_6 {
     @include col(6);
@@ -37,16 +183,17 @@
     @include col(3);
 }
 
-.b-col_3 {
-    @include col(3);
-}
-
 .b-col_2 {
     @include col(2);
 }
 
 .b-col_1 {
     @include col(1);
+}
+
+.b-col_0 {
+    max-width: 0;
+    margin: 0;
 }
 
 // 
@@ -76,6 +223,13 @@
     @include col-xl(1);
 }
 
+.b-col_xl-0 {
+    @include xl {
+        max-width: 0;
+        margin: 0;
+    }
+}
+
 // 
 // laptop max-6
 // 
@@ -101,6 +255,13 @@
 
 .b-col_laptop-1 {
     @include col-laptop(1);
+}
+
+.b-col_laptop-0 {
+    @include laptop {
+        max-width: 0;
+        margin: 0;
+    }
 }
 
 // 
@@ -130,6 +291,13 @@
     @include col-lg(1);
 }
 
+.b-col_lg-0 {
+    @include lg {
+        max-width: 0;
+        margin: 0;
+    }
+}
+
 // 
 // md - max-4
 // 
@@ -147,6 +315,13 @@
 
 .b-col_md-1 {
     @include col-md(1);
+}
+
+.b-col_md-0 {
+    @include md {
+        max-width: 0;
+        margin: 0;
+    }
 }
 
 // 
@@ -168,6 +343,13 @@
     @include col-sm(1);
 }
 
+.b-col_sm-0 {
+    @include sm {
+        max-width: 0;
+        margin: 0;
+    }
+}
+
 // 
 // xs - max-2
 // 
@@ -177,6 +359,13 @@
 
 .b-col_xs-1 {
     @include col-xs(1);
+}
+
+.b-col_xs-0 {
+    @include xs {
+        max-width: 0;
+        margin: 0;
+    }
 }
 
 // 
@@ -190,7 +379,77 @@
     @include col-mobile(1);
 }
 
-.b-col-inner {}
+.b-col_mobile-0 {
+    @include mobile {
+        max-width: 0;
+        margin: 0;
+    }
+}
+
+.b-col_flex-row {
+    @include flex-row;
+}
+
+.b-col_flex-colm {
+    @include flex-colm;
+}
+
+.b-col_flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.b-col_flex-ai-center {
+    align-items: center;
+}
+
+.b-col_flex-ai-start {
+    align-items: flex-start;
+}
+
+.b-col_flex-ai-end {
+    align-items: flex-end;
+}
+
+.b-col_flex-jc-center {
+    justify-content: center;
+}
+
+.b-col_flex-jc-start {
+    justify-content: flex-start;
+}
+
+.b-col_flex-jc-end {
+    justify-content: flex-end;
+}
+
+.b-col_p-big {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    @include md {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include xs {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.b-col_sm-order-minus-1 {
+    @include sm {
+        order: -1;
+    }
+}
+
+.b-col_relative {
+    position: relative;
+    z-index: 1;
+}
+
+.b-col-inner {
+    height: 100%;
+}
 
 .b-col-inner_full {
     @include inner-full;
@@ -202,4 +461,12 @@
 
 .b-col-inner_right {
     @include inner-right;
+}
+
+.b-img {
+    max-width: 100%;
+    @include xs {
+        width: 100%;
+        display: block;
+    }
 }

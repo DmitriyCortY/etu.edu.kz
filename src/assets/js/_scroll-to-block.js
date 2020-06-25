@@ -8,38 +8,38 @@ new ScrollToBlock({
 
 */
 class ScrollToBlock {
-	constructor(config) {
+    constructor(config) {
 
-		this.trigger = $(config.trigger)
-		this.anchor = $(config.anchor)
-		this.offset = config.offset || 0
-		this.speed = config.speed || 600
-		this.place = $('html')
+        this.trigger = $(config.trigger)
+        this.anchor = $(config.anchor)
+        this.offset = config.offset || 0
+        this.speed = config.speed || 600
+        this.place = $('html')
 
-		this.callHandler()
-	}
+        this.callHandler()
+    }
 
-	callHandler() {
+    callHandler() {
 
-		this.trigger.on('click', () => {
+        this.trigger.on('click', () => {
 
-			event.preventDefault()
-			this.scroll()
-		})
-	}
+            event.preventDefault()
+            this.scroll()
+        })
+    }
 
-	scroll() {
+    scroll() {
 
-		this.place.animate({
+        this.place.animate({
 
-			scrollTop: this.calcPosition(this)
-		}, this.speed)
-	}
+            scrollTop: this.calcPosition(this)
+        }, this.speed)
+    }
 
-	calcPosition() {
+    calcPosition() {
 
-		let anchorOffsetTop = this.anchor.eq(0).offset().top
-		let calc = anchorOffsetTop - this.offset
-		return calc
-	}
+        let anchorOffsetTop = this.anchor.eq(0).offset().top
+        let calc = anchorOffsetTop - this.offset
+        return calc
+    }
 }

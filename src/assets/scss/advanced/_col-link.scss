@@ -1,0 +1,27 @@
+.b-soc-link-list {}
+
+.b-soc-link-list__item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.b-soc-link {
+    width: 45px;
+    height: 45px;
+    color: $lightColor;
+    // @include bg-grad(160deg);
+    background-color: $accentColor;
+    cursor: pointer;
+    @include fz(18px, 21px);
+    @include flex-row;
+    @include flex-center;
+    @include hover {
+        color: $lightColor;
+        opacity: 0.9;
+    }
+}
+
+.b-soc-link span {
+    @include inh;
+}

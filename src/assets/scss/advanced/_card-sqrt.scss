@@ -1,0 +1,22 @@
+.b-card-sqrt {}
+
+.b-card-sqrt__inner {}
+
+.b-card-sqrt__header {}
+
+.b-card-sqrt__image {
+    & img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.b-card-sqrt__main {
+    @include p-full;
+}
+
+.b-card-sqrt__tizer-text {
+    margin-bottom: 10px;
+}
+
+.b-card-sqrt__footer {}

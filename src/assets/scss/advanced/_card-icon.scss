@@ -1,0 +1,29 @@
+.b-card-icon {}
+
+.b-card-icon__inner {}
+
+.b-card-icon__header {
+    @include p-full;
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include xs {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.b-card-icon__title-sm {
+    @include xs {
+        margin-top: 20px;
+    }
+}
+
+.b-card-icon__main {
+    @include p;
+}
+
+.b-card-icon__footer {
+    @include p-full;
+}

@@ -1,0 +1,111 @@
+.b-time-line-card {
+    height: 100%;
+    background-color: #f7f8fe;
+    position: relative;
+    @include after {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $accentColor;
+        z-index: 0;
+    }
+}
+
+.b-time-line-card_romb {
+    @include before {
+        position: absolute;
+        top: calc(50% - 10px);
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        @include bg-grad(115deg);
+        z-index: 1;
+        transform: rotate(45deg);
+    }
+}
+
+.b-time-line-card_logo {
+    height: 100%;
+    @include p-full;
+    & .b-time-line-card__inner {
+        height: 100%;
+        @include bg-grad(160deg);
+        z-index: 1;
+        position: relative;
+        @include flex-row;
+        @include flex-center;
+        & img {
+            display: block;
+        }
+    }
+    @include after {
+        z-index: 0;
+        width: 50%;
+        left: 50%;
+    }
+}
+
+.b-time-line-card__inner {
+    @include p-full;
+}
+
+.b-time-line-card__header {
+    min-height: 100px;
+    @include flex-colm;
+    @include p-b;
+}
+
+.b-time-line-card__header-row-top {
+    @include flex-row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: auto;
+}
+
+.b-time-line-card__header-row-bottom {
+    @include flex-row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.b-time-line-card__count {
+    color: $accentColor;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    & strong {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+}
+
+.b-time-line-card__icon {}
+
+.b-time-line-card__footer {
+    @include p-t;
+    min-height: 100px;
+    @include flex-colm;
+}
+
+.b-time-line-card__footer-row-top {
+    margin-bottom: auto;
+}
+
+.b-time-line-card__footer-row-bottom {
+    margin-top: auto;
+}
+
+.b-time-line-card__action {
+    text-align: right;
+    @include title-sm;
+    color: $accentColor;
+}
+
+.b-time-line-card__text {
+    @include text-xs;
+    color: $darkColor;
+}

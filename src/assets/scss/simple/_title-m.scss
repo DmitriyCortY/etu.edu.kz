@@ -1,5 +1,8 @@
 .b-title-m {
     @include title-m();
+    & img {
+        margin-right: 10px;
+    }
 }
 
 .b-title-m_line {
@@ -12,6 +15,7 @@
 
 .b-title-m_light {
     color: $lightColor;
+    font-weight: 200;
 }
 
 .b-title-m_accent {

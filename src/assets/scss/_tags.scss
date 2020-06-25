@@ -1,31 +1,25 @@
 h1 {
-    font-size: 48px;
-    line-height: 52px;
+    @include fz(48px, 52px);
 }
 
 h2 {
-    font-size: 36px;
-    line-height: 40px;
+    @include fz(36px, 40px);
 }
 
 h3 {
-    font-size: 30px;
-    line-height: 34px;
+    @include fz(30px, 34px);
 }
 
 h4 {
-    font-size: 24px;
-    line-height: 28px;
+    @include fz(24px, 28px);
 }
 
 h5 {
-    font-size: 18px;
-    line-height: 22px;
+    @include fz(18px, 22px);
 }
 
 h6 {
-    font-size: 16px;
-    line-height: 20px;
+    @include fz(16px, 20px);
 }
 
 p {
@@ -44,12 +38,6 @@ ul,
 li {
     list-style-type: none;
     list-style: none;
-}
-
-ol,
-ul {
-    margin-top: 12px;
-    margin-bottom: 12px;
 }
 
 li {
@@ -80,4 +68,8 @@ ul {
 
 textarea {
     resize: none;
+}
+
+img {
+    max-width: 100%;
 }

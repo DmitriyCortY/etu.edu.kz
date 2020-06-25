@@ -14,6 +14,10 @@
     color: $lightColor;
 }
 
+.b-title-section-cover_accent {
+    color: $accentColor;
+}
+
 .b-title-section-cover span {
     @include inh;
 }

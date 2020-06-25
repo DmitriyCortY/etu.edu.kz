@@ -1,0 +1,35 @@
+.b-card-grad-header {}
+
+.b-card-grad-header_header-gray {
+    & .b-card-grad-header__header {
+        background: #f8f7fe;
+    }
+}
+
+.b-card-grad-header_header-bg-image {
+    & .b-card-grad-header__header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.b-card-grad-header__inner {}
+
+.b-card-grad-header__header {
+    @include p-full;
+    @include bg-grad(160deg);
+    min-height: 100px;
+    @include flex-row;
+    align-items: center;
+}
+
+.b-card-grad-header__main {
+    @include p-full;
+}
+
+.b-card-grad-header__footer {}
+
+.b-card-grad-header__title-sm {
+    margin-bottom: 20px;
+}
