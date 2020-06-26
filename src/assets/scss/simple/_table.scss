@@ -1,0 +1,84 @@
+.b-table {
+    width: 100%;
+    background-color: #f9f9ff;
+    position: relative;
+    z-index: 1;
+}
+
+.b-table_3-1-1 {
+    & .b-table__inner table th {
+        &:nth-child(1) {
+            width: calc((100% / 5) * 3);
+        }
+        &:nth-child(2) {
+            width: calc((100% / 5) * 1);
+        }
+        &:nth-child(3) {
+            width: calc((100% / 5) * 1);
+        }
+    }
+    & .b-table__inner table td {
+        &:nth-child(1) {
+            width: calc((100% / 5) * 3);
+        }
+        &:nth-child(2) {
+            width: calc((100% / 5) * 1);
+        }
+        &:nth-child(3) {
+            width: calc((100% / 5) * 1);
+        }
+    }
+}
+
+.b-table_1-1-1-1 {
+    & .b-table__inner table th {
+        &:nth-child(1) {
+            width: calc((100% / 4) * 1);
+        }
+        &:nth-child(2) {
+            width: calc((100% / 4) * 1);
+        }
+        &:nth-child(3) {
+            width: calc((100% / 4) * 1);
+        }
+    }
+    & .b-table__inner table td {
+        &:nth-child(1) {
+            width: calc((100% / 4) * 1);
+        }
+        &:nth-child(2) {
+            width: calc((100% / 4) * 1);
+        }
+        &:nth-child(3) {
+            width: calc((100% / 4) * 1);
+        }
+    }
+}
+
+.b-table__inner {
+    width: 100%;
+}
+
+.b-table__inner table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.b-table__inner table tr {
+    &:first-child {
+        border-bottom: 1px solid $accentColor;
+    }
+}
+
+.b-table__inner table th {
+    @include title-xs;
+    color: $accentColor;
+    text-align: left;
+    padding: 32px 16px;
+}
+
+.b-table__inner table td {
+    @include standard-text;
+    color: $darkColor;
+    padding: 8px 16px 8px 16px;
+}

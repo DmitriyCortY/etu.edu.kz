@@ -64,3 +64,11 @@
         display: none;
     }
 }
+
+.b-section__title-sm {
+    @include m-b;
+}
+
+.b-section__title-sm-m-t {
+    @include m-t;
+}

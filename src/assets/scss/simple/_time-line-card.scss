@@ -47,8 +47,19 @@
     }
 }
 
+.b-time-line-card_logo-p-0 {
+    padding: 0 !important;
+}
+
 .b-time-line-card__inner {
-    @include p-full;
+    // @include p-full;
+    padding: 20px 10px;
+    @include md {
+        padding: 15px;
+    }
+    @include xs {
+        padding: 10px;
+    }
 }
 
 .b-time-line-card__header {
