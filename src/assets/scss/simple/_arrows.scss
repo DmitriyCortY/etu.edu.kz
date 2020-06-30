@@ -1,0 +1,50 @@
+.b-arrows {
+    @include flex-row;
+    @include flex-center;
+}
+
+.b-arrows__arrow {
+    width: 50%;
+    @include flex-row;
+    @include flex-center;
+}
+
+.b-arrow {
+    cursor: pointer;
+    @include fz(52px);
+    color: $lightColor;
+    height: 75px;
+    &:not(.slick-disabled) {
+        @include bg-grad(160deg);
+        @include hover {
+            opacity: 0.8;
+        }
+    }
+    &.slick-disabled {
+        background-color: #f7f8fe;
+        cursor: no-drop;
+    }
+    & span {
+        transition: $t;
+    }
+}
+
+.b-arrow_prew {
+    &:not(.slick-disabled) {
+        @include hover {
+            & span {
+                transform: translate3d(-5px, 0, 0);
+            }
+        }
+    }
+}
+
+.b-arrow_next {
+    &:not(.slick-disabled) {
+        @include hover {
+            & span {
+                transform: translate3d(5px, 0, 0);
+            }
+        }
+    }
+}

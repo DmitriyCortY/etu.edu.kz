@@ -72,3 +72,29 @@
 .b-section__title-sm-m-t {
     @include m-t;
 }
+
+.b-section__ryk-ETU {
+    position: absolute;
+    width: calc((100% / 6) * 5 + 15px);
+    height: calc(100% - 40px);
+    left: -20px;
+    top: 20px;
+    background-color: #f7f8fe;
+    z-index: 0;
+    @include md {
+        display: none;
+    }
+}
+
+.b-section__ryk-ETU-big {
+    position: absolute;
+    width: calc((100% / 6) * 5 + 35px);
+    height: calc(100% - 40px);
+    left: -20px;
+    top: 20px;
+    background-color: #f7f8fe;
+    z-index: 0;
+    @include md {
+        display: none;
+    }
+}
