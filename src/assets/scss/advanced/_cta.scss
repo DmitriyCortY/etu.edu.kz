@@ -1,5 +1,7 @@
 .b-cta {
     @include row;
+    position: relative;
+    z-index: 1;
 }
 
 .b-cta__inner {}
@@ -16,6 +18,12 @@
     @include sm {
         width: 100%;
         text-align: center;
+    }
+    &:first-child {
+        border-left: 1px solid $accentColor;
+        @include sm {
+            border-right: 1px solid $accentColor;
+        }
     }
 }
 

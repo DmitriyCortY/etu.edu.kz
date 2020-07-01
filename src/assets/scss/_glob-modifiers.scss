@@ -89,3 +89,12 @@
 ._ma-b {
     @include m-b;
 }
+
+._w-100 {
+    width: 100%;
+}
+
+._p-relative {
+    position: relative;
+    z-index: 1;
+}

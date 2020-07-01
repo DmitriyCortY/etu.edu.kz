@@ -52,7 +52,7 @@
     height: calc(100% - 40px);
     left: -20px;
     top: 20px;
-    background-color: #f7f8fe;
+    background-color: $grayColor;
     z-index: 0;
     @include md {
         width: calc(100% + 30px);
@@ -79,7 +79,7 @@
     height: calc(100% - 40px);
     left: -20px;
     top: 20px;
-    background-color: #f7f8fe;
+    background-color: $grayColor;
     z-index: 0;
     @include md {
         display: none;
@@ -92,9 +92,34 @@
     height: calc(100% - 40px);
     left: -20px;
     top: 20px;
-    background-color: #f7f8fe;
+    background-color: $grayColor;
     z-index: 0;
     @include md {
         display: none;
+    }
+}
+
+.b-section__full-grey-bg-in-line {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 100%;
+    background-color: $grayColor;
+    @include xl {
+        left: 60px;
+        width: calc(100% - 120px);
+    }
+    @include laptop {
+        left: 40px;
+        width: calc(100% - 80px);
+    }
+    @include lg {
+        left: 15px;
+        width: calc(100% - 30px);
+    }
+    @include xs {
+        left: 10px;
+        width: calc(100% - 20px);
     }
 }

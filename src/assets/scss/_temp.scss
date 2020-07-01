@@ -460,6 +460,55 @@
     z-index: 1;
 }
 
+.b-col_xl-relative {
+    @include xl {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.b-col_laptop-relative {
+    @include laptop {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.b-col_lg-relative {
+    @include lg {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.b-col_md-relative {
+    @include md {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.b-col_sm-relative {
+    @include sm {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.b-col_xs-relative {
+    @include xs {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.b-col_mobile-relative {
+    @include mobile {
+        position: relative;
+        z-index: 1;
+    }
+}
+
 .b-col_absolute {
     position: absolute;
     z-index: 1;
@@ -495,8 +544,20 @@
     @include inner-full;
 }
 
+.b-col-inner_full-all {
+    @include inner-full-all;
+}
+
 .b-col-inner_left {
     @include inner-left;
+}
+
+.b-col-inner_top {
+    @include inner-top;
+}
+
+.b-col-inner_bottom {
+    @include inner-bottom;
 }
 
 .b-col-inner_right {

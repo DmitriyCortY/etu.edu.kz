@@ -14,18 +14,23 @@
     @include fz(52px);
     color: $lightColor;
     height: 75px;
+    @include bg-grad(160deg);
+    transition: $t;
     &:not(.slick-disabled) {
-        @include bg-grad(160deg);
         @include hover {
             opacity: 0.8;
         }
     }
     &.slick-disabled {
-        background-color: #f7f8fe;
+        opacity: 0.1;
         cursor: no-drop;
     }
     & span {
         transition: $t;
+    }
+    @include xs {
+        height: 58px;
+        @include fz(36px);
     }
 }
 

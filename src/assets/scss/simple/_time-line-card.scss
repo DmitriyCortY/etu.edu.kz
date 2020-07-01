@@ -1,6 +1,6 @@
 .b-time-line-card {
     height: 100%;
-    background-color: #f7f8fe;
+    background-color: $grayColor;
     position: relative;
     @include after {
         position: absolute;

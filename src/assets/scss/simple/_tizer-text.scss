@@ -1,3 +1,19 @@
 .b-tizer-text {
     @include tizer;
+    & i,
+    & span {
+        margin-right: 10px;
+    }
+}
+
+.b-tizer-text_light {
+    color: $lightColor;
+}
+
+.b-tizer-text_dark {
+    color: $darkColor;
+}
+
+.b-tizer-text_accent {
+    color: $accentColor;
 }
