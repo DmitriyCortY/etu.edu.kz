@@ -3,6 +3,7 @@
     & i,
     & span {
         margin-right: 10px;
+        @include fz(16px);
     }
 }
 

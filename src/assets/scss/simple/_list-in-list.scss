@@ -1,0 +1,12 @@
+.b-list-in-list {
+    & ol,
+    & ul {
+        &>li {
+            &>ol,
+            &>ul {
+                margin-top: 15px;
+                margin-left: 15px;
+            }
+        }
+    }
+}

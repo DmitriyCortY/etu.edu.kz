@@ -2,10 +2,8 @@
     position: relative;
 }
 
-.b-section_full {
-    & .b-section__inner {
-        @include wrapper;
-    }
+.b-section_bg-gray {
+    background-color: $grayColor;
 }
 
 // 
@@ -29,7 +27,19 @@
 // modifications
 // 
 // 
-.b-section__inner {}
+.b-section__inner {
+    position: relative;
+    @include wrapper;
+}
+
+.b-section__inner_bg-gray {
+    background-color: $grayColor;
+}
+
+.b-section__inner-full {
+    position: relative;
+    @include wrapper-full;
+}
 
 .b-section__content {
     position: relative;
@@ -121,5 +131,20 @@
     @include xs {
         left: 10px;
         width: calc(100% - 20px);
+    }
+}
+
+.b-section__bg-image-sm {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.085;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    @include sm {
+        display: block;
     }
 }

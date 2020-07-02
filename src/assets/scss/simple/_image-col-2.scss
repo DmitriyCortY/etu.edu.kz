@@ -1,0 +1,13 @@
+.b-image-col-2 {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    max-width: calc((100% / 6) * 2 - #{$m * 1.33333});
+    @include md {
+        max-width: calc((100% / 4) * 2 - #{$m-m});
+    }
+    @include xs {
+        max-width: calc((100% / 2) * 2 - #{$m-s * 0.5});
+    }
+}

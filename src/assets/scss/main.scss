@@ -28,19 +28,19 @@ a:active {
 
 @include from(960px) {
      ::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-        background-color: $lightColor;
+        width: 3px;
+        height: 3px;
+        background-color: rgba($accentColor, 0.4);
         border-radius: 2px;
     }
      ::-webkit-scrollbar-thumb {
-        background: $darkColor;
+        background: $accentColor;
         border-radius: 2px;
     }
 }
 
 ::selection {
-    background-color: $darkColor;
+    background-color: $accentColor;
     color: $lightColor;
 }
 

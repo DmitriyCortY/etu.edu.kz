@@ -70,6 +70,14 @@
     @include p-b;
 }
 
+._pa-big-t {
+    @include p-big-t;
+}
+
+._pa-big-b {
+    @include p-big-b;
+}
+
 ._ma {
     @include m-full;
 }
@@ -97,4 +105,39 @@
 ._p-relative {
     position: relative;
     z-index: 1;
+}
+
+._certificat-bg {
+    position: relative;
+    @include before {
+        position: absolute;
+        width: calc(((100% / 4) * 5) + #{$p * 1.5});
+        height: 100%;
+        background-color: $grayColor;
+        top: 0;
+        left: calc(((100% / 4) * -2) - #{$p * 2});
+        z-index: 0;
+    }
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+    @include md {
+        @include before {
+            width: calc(150% + #{$p-m});
+            left: calc(-50% + #{$p-m});
+        }
+    }
+}
+
+._al-l,
+.align-left {
+    float: left;
+    @include m-r;
+}
+
+._al-r,
+.align-right {
+    float: right;
+    @include m-l;
 }

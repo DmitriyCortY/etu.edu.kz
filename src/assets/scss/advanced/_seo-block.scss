@@ -1,0 +1,14 @@
+.b-seo-block {
+    overflow: auto;
+    max-height: 450px;
+    text-align: justify;
+    padding: 0 #{$p * 2} 0 #{$p};
+    @include md {
+        max-height: 380px;
+        padding: 0 #{$p-m} 0 #{$p-m};
+    }
+    @include xs {
+        min-height: 320px;
+        padding: 0 #{$p-s} 0 #{$p-s};
+    }
+}

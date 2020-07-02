@@ -1,0 +1,32 @@
+.b-field {
+    width: 100%;
+    @include flex-row;
+}
+
+.b-field__input {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba($accentColor, 0.4);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    @include title-xs;
+    color: $darkColor;
+    transition: $t;
+    @include xs {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    &::placeholder {
+        color: rgba($darkColor, 0.4);
+    }
+    &:focus {
+        border-bottom: 1px solid $accentColor;
+        &::placeholder {
+            color: $darkColor;
+        }
+    }
+}

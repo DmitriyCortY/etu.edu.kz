@@ -1,7 +1,6 @@
 .b-checkbox {
     display: inline-flex;
     max-width: 100%;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -21,6 +20,7 @@
     width: 13px;
     height: 13px;
     position: relative;
+    top: 3px;
     border: 1px solid $accentColor;
     overflow: hidden;
     @include after {
@@ -43,6 +43,7 @@
     margin-top: 2px;
     width: calc(100% - 13px - 10px);
     user-select: none;
+    text-align: justify;
 }
 
 //

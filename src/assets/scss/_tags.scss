@@ -1,29 +1,42 @@
 h1 {
-    @include fz(48px, 52px);
+    @include fz(20px, 28px);
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 h2 {
-    @include fz(36px, 40px);
+    @include fz(19px, 27px);
+    margin-bottom: 17px;
+    font-weight: 600;
 }
 
 h3 {
-    @include fz(30px, 34px);
+    @include fz(18px, 26px);
+    margin-bottom: 14px;
+    font-weight: 600;
 }
 
 h4 {
-    @include fz(24px, 28px);
+    @include fz(17px, 25px);
+    margin-bottom: 11px;
+    font-weight: 600;
 }
 
 h5 {
-    @include fz(18px, 22px);
+    @include fz(16px, 24px);
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 h6 {
-    @include fz(16px, 20px);
+    @include fz(15px, 23px);
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 
 p {
     @include standard-text;
+    text-align: justify;
     &:not(:last-child) {
         margin-bottom: 15px;
     }
@@ -48,7 +61,13 @@ li {
 }
 
 ol {
-    & li {}
+    counter-reset: list;
+    &>li {
+        &:before {
+            counter-increment: list;
+            content: counter(list) ") ";
+        }
+    }
 }
 
 ul {
@@ -59,7 +78,7 @@ ul {
             position: absolute;
             width: 4px;
             height: 4px;
-            top: calc(50% - 2px);
+            top: 8px;
             left: 0;
             background-color: $accentColor;
         }
@@ -72,4 +91,12 @@ textarea {
 
 img {
     max-width: 100%;
+}
+
+button {
+    border: none;
+}
+
+textarea {
+    min-height: 80px;
 }

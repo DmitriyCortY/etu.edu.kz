@@ -79,11 +79,11 @@
 @mixin p {
     padding-left: $p;
     padding-right: $p;
-    @include xl {
+    @include md {
         padding-left: $p-m;
         padding-right: $p-m;
     }
-    @include lg {
+    @include xs {
         padding-left: $p-s;
         padding-right: $p-s;
     }
@@ -91,62 +91,82 @@
 
 @mixin p-full {
     padding: $p;
-    @include xl {
+    @include md {
         padding: $p-m;
     }
-    @include lg {
+    @include xs {
         padding: $p-s;
     }
 }
 
 @mixin p-l {
     padding-left: $p;
-    @include xl {
+    @include md {
         padding-left: $p-m;
     }
-    @include lg {
+    @include xs {
         padding-left: $p-s;
     }
 }
 
 @mixin p-r {
     padding-right: $p;
-    @include xl {
+    @include md {
         padding-right: $p-m;
     }
-    @include lg {
+    @include xs {
         padding-right: $p-s;
     }
 }
 
 @mixin p-t {
     padding-top: $p;
-    @include xl {
+    @include md {
         padding-top: $p-m;
     }
-    @include lg {
+    @include xs {
         padding-top: $p-s;
     }
 }
 
 @mixin p-b {
     padding-bottom: $p;
-    @include xl {
+    @include md {
         padding-bottom: $p-m;
     }
-    @include lg {
+    @include xs {
         padding-bottom: $p-s;
+    }
+}
+
+@mixin p-big-t {
+    padding-top: #{$p * 2};
+    @include md {
+        padding-top: #{$p-m * 2};
+    }
+    @include xs {
+        padding-top: #{$p-s * 2};
+    }
+}
+
+@mixin p-big-b {
+    padding-bottom: #{$p * 2};
+    @include md {
+        padding-bottom: #{$p-m * 2};
+    }
+    @include xs {
+        padding-bottom: #{$p-s * 2};
     }
 }
 
 @mixin m {
     margin-left: $p;
     margin-right: $p;
-    @include xl {
+    @include md {
         margin-left: $p-m;
         margin-right: $p-m;
     }
-    @include lg {
+    @include xs {
         margin-left: $p-s;
         margin-right: $p-s;
     }
@@ -154,50 +174,50 @@
 
 @mixin m-full {
     margin: $m;
-    @include xl {
+    @include md {
         margin: $m-m;
     }
-    @include lg {
+    @include xs {
         margin: $m-s;
     }
 }
 
 @mixin m-l {
     margin-left: $m;
-    @include xl {
+    @include md {
         margin-left: $m-m;
     }
-    @include lg {
+    @include xs {
         margin-left: $m-s;
     }
 }
 
 @mixin m-r {
     margin-right: $m;
-    @include xl {
+    @include md {
         margin-right: $m-m;
     }
-    @include lg {
+    @include xs {
         margin-right: $m-s;
     }
 }
 
 @mixin m-t {
     margin-top: $m;
-    @include xl {
+    @include md {
         margin-top: $m-m;
     }
-    @include lg {
+    @include xs {
         margin-top: $m-s;
     }
 }
 
 @mixin m-b {
     margin-bottom: $m;
-    @include xl {
+    @include md {
         margin-bottom: $m-m;
     }
-    @include lg {
+    @include xs {
         margin-bottom: $m-s;
     }
 }
@@ -213,6 +233,40 @@
     max-width: calc((100% / 8) * 6 - 30px);
     margin-left: calc((100% / 8) * 1 + 15px);
     margin-right: calc((100% / 8) * 1 + 15px);
+    padding-left: $p;
+    padding-right: $p;
+    @include xl {
+        max-width: calc(100% - 120px);
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    @include laptop {
+        max-width: calc(100% - 80px);
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    @include lg {
+        max-width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    @include md {
+        padding-left: #{$p-m};
+        padding-right: #{$p-m};
+    }
+    @include xs {
+        max-width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: #{$p-s};
+        padding-right: #{$p-s};
+    }
+}
+
+@mixin wrapper-full {
+    max-width: calc((100% / 8) * 8 - 30px);
+    margin-left: $m;
+    margin-right: $m;
     padding-left: $p;
     padding-right: $p;
     @include xl {
@@ -314,6 +368,68 @@
 }
 
 @mixin col-mobile($n) {
+    @include mobile {
+        width: 100%;
+        max-width: calc(((100% / 2) * #{$n}) - #{$p-s * 2});
+        margin: #{$p-s};
+    }
+}
+
+@mixin col-b($n) {
+    width: 100%;
+    max-width: calc(((100% / 8) * #{$n}) - #{$p * 2});
+    margin: #{$p};
+}
+
+@mixin col-b-xl($n) {
+    @include xl {
+        width: 100%;
+        max-width: calc(((100% / 6) * #{$n}) - #{$p * 2});
+        margin: #{$p};
+    }
+}
+
+@mixin col-b-laptop($n) {
+    @include laptop {
+        width: 100%;
+        max-width: calc(((100% / 6) * #{$n}) - #{$p * 2});
+        margin: #{$p};
+    }
+}
+
+@mixin col-b-lg($n) {
+    @include lg {
+        width: 100%;
+        max-width: calc(((100% / 6) * #{$n}) - #{$p * 2});
+        margin: #{$p};
+    }
+}
+
+@mixin col-b-md($n) {
+    @include md {
+        width: 100%;
+        max-width: calc(((100% / 4) * #{$n}) - #{$p-m * 2});
+        margin: #{$p-m};
+    }
+}
+
+@mixin col-b-sm($n) {
+    @include sm {
+        width: 100%;
+        max-width: calc(((100% / 4) * #{$n}) - #{$p-m * 2});
+        margin: #{$p-m};
+    }
+}
+
+@mixin col-b-xs($n) {
+    @include xs {
+        width: 100%;
+        max-width: calc(((100% / 2) * #{$n}) - #{$p-s * 2});
+        margin: #{$p-s};
+    }
+}
+
+@mixin col-b-mobile($n) {
     @include mobile {
         width: 100%;
         max-width: calc(((100% / 2) * #{$n}) - #{$p-s * 2});
@@ -437,7 +553,7 @@
 }
 
 @mixin title-sm() {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     line-height: 17px;
 }
@@ -535,6 +651,19 @@
         top: 0;
         left: 0;
         @include bg-grad(175deg);
+    }
+}
+
+@mixin line-light() {
+    position: relative;
+    @include p-l;
+    @include before() {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba($lightColor, 0.6);
     }
 }
 

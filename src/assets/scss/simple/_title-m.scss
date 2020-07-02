@@ -5,6 +5,10 @@
     }
 }
 
+.b-title-m_inline {
+    display: inline-flex;
+}
+
 .b-title-m_line {
     @include line-grad();
 }

@@ -1,0 +1,23 @@
+.b-footer-list {
+    & ul {
+        & li {
+            @include p-l;
+            color: $lightColor;
+            @include after {
+                background-color: rgba($lightColor, 0.6);
+            }
+            & a {
+                @include inh;
+            }
+            &:not(:last-child) {
+                margin-bottom: 20px;
+                @include md {
+                    margin-bottom: 16px;
+                }
+                @include xs {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

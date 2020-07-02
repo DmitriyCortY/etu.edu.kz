@@ -1,8 +1,11 @@
 .b-title-cover {
     display: block;
     @include bg-grad(160deg);
-    height: 80px;
+    min-height: 80px;
     position: relative;
+    & p {
+        color: $lightColor;
+    }
 }
 
 .b-title-cover_with-sqrt-button {

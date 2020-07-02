@@ -6,6 +6,10 @@
     @include line-grad();
 }
 
+.b-title-sm_line-light {
+    @include line-grad();
+}
+
 .b-title-sm_dark {
     color: $darkColor;
 }

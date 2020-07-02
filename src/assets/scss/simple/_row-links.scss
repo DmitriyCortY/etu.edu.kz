@@ -1,0 +1,32 @@
+.b-row-links {
+    @include flex-row;
+    align-items: center;
+}
+
+.b-row-links_3 {
+    & .b-row-link {
+        max-width: calc(100% / 3);
+        @include to(1800px) {
+            max-width: 100%;
+        }
+        @include xl {
+            max-width: calc(100% / 3);
+        }
+        @include laptop {
+            max-width: 100%;
+        }
+        @include md {
+            max-width: calc(100% / 4);
+        }
+        @include to(920px) {
+            max-width: calc(100% / 2);
+        }
+        @include xs {
+            max-width: 100%;
+        }
+    }
+}
+
+.b-row-link {
+    width: 100%;
+}

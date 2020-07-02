@@ -1,0 +1,31 @@
+.b-gray-box {
+    @include p-full;
+    background-color: $grayColor;
+    position: relative;
+}
+
+.b-gray-box_line {
+    @include line-grad;
+}
+
+.b-gray-box_line-light {
+    @include line-light;
+}
+
+.b-gray-box__data {
+    padding: 10px;
+    background-color: $grayColor;
+    @include fz(10px, 12px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include m-full;
+    color: $darkColor;
+}
+
+.b-gray-box__title {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: $grayColor;
+}

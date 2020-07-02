@@ -1,0 +1,21 @@
+.b-left-line-text {}
+
+.b-left-line-text_line {
+    @include line-grad;
+}
+
+.b-left-line-text_line-light {
+    @include line-light;
+}
+
+.b-left-line-text_light {
+    color: $lightColor;
+}
+
+.b-left-line-text_dark {
+    color: $darkColor;
+}
+
+.b-left-line-text_accent {
+    color: $accentColor;
+}
