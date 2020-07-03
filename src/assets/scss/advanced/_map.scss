@@ -22,3 +22,13 @@
         opacity: 1;
     }
 }
+
+.b-map_section {
+    min-height: 500px;
+    @include md {
+        min-height: 320px;
+    }
+    @include xs {
+        min-height: 180px;
+    }
+}

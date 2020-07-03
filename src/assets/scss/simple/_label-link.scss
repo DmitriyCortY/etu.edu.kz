@@ -3,6 +3,13 @@
     flex-direction: column;
 }
 
+.b-labet-link_title-accent {
+    & .b-label-link__title {
+        opacity: 1;
+        color: $accentColor;
+    }
+}
+
 .b-label-link_dark {
     & .b-label-link__content {
         color: $darkColor;

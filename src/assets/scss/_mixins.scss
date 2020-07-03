@@ -493,27 +493,21 @@
 }
 
 @mixin inner-top {
-    width: calc(100% + #{$p});
     margin-top: #{$p * -1};
     @include md {
-        width: calc(100% + #{$p-m});
         margin-top: #{$p-m * -1};
     }
     @include xs {
-        width: calc(100% + #{$p-s});
         margin-top: #{$p-s * -1};
     }
 }
 
 @mixin inner-bottom {
-    width: calc(100% + #{$p});
     margin-bottom: #{$p * -1};
     @include md {
-        width: calc(100% + #{$p-m});
         margin-bottom: #{$p-m * -1};
     }
     @include xs {
-        width: calc(100% + #{$p-s});
         margin-bottom: #{$p-s * -1};
     }
 }
@@ -553,7 +547,7 @@
 }
 
 @mixin title-sm() {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     line-height: 17px;
 }

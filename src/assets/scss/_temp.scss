@@ -544,6 +544,14 @@
     @include p-b
 }
 
+.b-col-b_8 {
+    @include col-b(8);
+}
+
+.b-col-b_7 {
+    @include col-b(77);
+}
+
 .b-col-b_6 {
     @include col-b(6);
 }

@@ -1,16 +1,18 @@
-.b-card-grad-header {}
-
-.b-card-grad-header_header-gray {
-    & .b-card-grad-header__header {
-        background: $grayColor;
+.b-card-grad-header {
+    @include hover {
+        & .b-card-grad-header__header {
+            @include after {
+                opacity: 0;
+            }
+        }
+        & .b-title-m {
+            color: $lightColor;
+        }
     }
-}
-
-.b-card-grad-header_header-bg-image {
-    & .b-card-grad-header__header {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    & .b-title-m {
+        transition: $t;
+        position: relative;
+        z-index: 1;
     }
 }
 
@@ -18,10 +20,23 @@
 
 .b-card-grad-header__header {
     @include p-full;
-    @include bg-grad(160deg);
     min-height: 100px;
     @include flex-row;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // 
+    position: relative;
+    @include after {
+        transition: $t;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $grayColor;
+    }
 }
 
 .b-card-grad-header__main {

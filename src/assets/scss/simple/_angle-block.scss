@@ -1,0 +1,25 @@
+.b-angle-block {
+    @include p-full;
+    background-color: $grayColor;
+    position: relative;
+    @include after {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top: 1px solid $accentColor;
+        border-right: 1px solid $accentColor;
+    }
+    & img {
+        max-width: 30px;
+        display: block;
+        margin-left: auto;
+    }
+}
+
+.b-angle-block__row {
+    &:not(:last-child) {
+        @include m-b;
+    }
+}

@@ -1,0 +1,46 @@
+.b-contact-box {
+    & ul {
+        & li {
+            & a {
+                @include inh;
+            }
+        }
+    }
+    padding-bottom: 40px;
+    padding-top: 20px;
+    @include md {
+        padding-bottom: 30px;
+    }
+    @include xs {
+        padding-bottom: 20px;
+    }
+}
+
+.b-contact-box_border {
+    height: 100%;
+    border-top: 1px solid $accentColor;
+    border-bottom: 1px solid $accentColor;
+    margin-left: #{$m * -1};
+    margin-right: #{$m * -1};
+    width: calc(100% + #{$m * 2});
+    @include p;
+    @include md {
+        margin-left: #{$m-m * -1};
+        margin-right: #{$m-m * -1};
+        width: calc(100% + #{$m-m * 2});
+    }
+    @include xs {
+        margin-left: #{$m-s * -1};
+        margin-right: #{$m-s * -1};
+        width: calc(100% + #{$m-s * 2});
+    }
+}
+
+.b-contact-box__tizer {
+    margin-bottom: 10px;
+    opacity: 0.4;
+}
+
+.b-contact-box__title {
+    margin-bottom: 15px;
+}

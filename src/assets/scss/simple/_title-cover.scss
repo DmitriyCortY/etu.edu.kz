@@ -1,7 +1,9 @@
 .b-title-cover {
     display: block;
     @include bg-grad(160deg);
-    min-height: 80px;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
     position: relative;
     & p {
         color: $lightColor;
@@ -34,6 +36,7 @@
 }
 
 .b-title-cover__row {
+    width: 100%;
     padding: 32px 20px;
     @include flex-row;
     align-items: center;

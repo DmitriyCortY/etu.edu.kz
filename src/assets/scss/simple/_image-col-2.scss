@@ -8,6 +8,6 @@
         max-width: calc((100% / 4) * 2 - #{$m-m});
     }
     @include xs {
-        max-width: calc((100% / 2) * 2 - #{$m-s * 0.5});
+        max-width: 100%;
     }
 }

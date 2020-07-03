@@ -40,10 +40,13 @@ p {
     &:not(:last-child) {
         margin-bottom: 15px;
     }
+    &>span {
+        color: $accentColor;
+    }
 }
 
 strong {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 ol,
@@ -95,6 +98,7 @@ img {
 
 button {
     border: none;
+    background-color: transparent;
 }
 
 textarea {

@@ -1,0 +1,35 @@
+.b-scroll-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    @include m-full;
+    z-index: 5;
+    height: 60px;
+    width: 60px;
+    @include flex-row;
+    @include flex-center;
+    @include bg-grad(160deg);
+    color: $lightColor;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0.3;
+    @include hover {
+        opacity: 1;
+        & span {
+            transform: translate3d(0, -5px, 0);
+        }
+    }
+    & span {
+        transition: $t;
+    }
+    @include md {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+    @include xs {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}

@@ -1,5 +1,34 @@
 .b-border-box {
     border: 1px solid $accentColor;
+    position: relative;
+    @include before {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: calc(100% + 0.5px + #{$p});
+        background-color: #B0B2CE;
+        @include md {
+            right: calc(100% + 0.5px + #{$p-m});
+        }
+        @include xs {
+            right: calc(100% + 0.5px + #{$p-s});
+        }
+    }
+    @include after {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: calc(100% + 0.5px + #{$p});
+        background-color: #B0B2CE;
+        @include md {
+            left: calc(100% + 0.5px + #{$p-m});
+        }
+        @include xs {
+            left: calc(100% + 0.5px + #{$p-s});
+        }
+    }
 }
 
 .b-border-box__inner {

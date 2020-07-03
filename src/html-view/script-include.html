@@ -1,3 +1,6 @@
+<div class="b-scroll-to-top">
+    <span class="pe-7s-angle-up"></span>
+</div>
 <script src="./assets/lib/jquery-3.3.1.min.js"></script>
 <script src="./assets/lib/fancybox/jquery.fancybox.min.js"></script>
 <script src="./assets/lib/slick-slider/slick.min.js"></script>
@@ -40,6 +43,17 @@
                                 arrow: false
                             }
                         }]
+                    });
+                }
+            }
+            if ($('[data-solo-slider-list]').length > 0) {
+                for (var i = 0; i < $('[data-solo-slider-list]').length; i++) {
+                    $('[data-solo-slider-list]').eq(i).slick({
+                        infinite: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        prevArrow: $('[data-solo-slider-arrow-prev]').eq(i),
+                        nextArrow: $('[data-solo-slider-arrow-next]').eq(i)
                     });
                 }
             }

@@ -46,6 +46,7 @@
 }
 
 .b-section__bg-etu {
+    max-width: calc(100% + #{$p * 2});
     @include row;
     position: absolute;
     top: 50%;

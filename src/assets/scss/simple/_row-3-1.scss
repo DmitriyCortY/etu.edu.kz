@@ -1,0 +1,26 @@
+.b-row-3-1 {
+    @include flex-row;
+    @include row;
+}
+
+.b-col-3-1 {
+    @include p;
+}
+
+.b-col-3-1_3 {
+    width: calc((100% / 4) * 3);
+    @include md {
+        width: 100%;
+    }
+}
+
+.b-col-3-1_1 {
+    width: calc((100% / 4) * 1);
+    @include md {
+        margin-left: auto;
+        margin-top: 20px;
+    }
+    @include sm {
+        width: 50%;
+    }
+}

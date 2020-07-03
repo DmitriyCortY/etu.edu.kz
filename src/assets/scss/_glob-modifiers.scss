@@ -133,11 +133,43 @@
 ._al-l,
 .align-left {
     float: left;
-    @include m-r;
+    margin-right: #{$m * 2};
+    @include md {
+        margin-right: #{$m-m * 2};
+    }
+    @include xs {
+        margin-right: 0;
+        float: none;
+    }
 }
 
 ._al-r,
 .align-right {
     float: right;
-    @include m-l;
+    margin-left: #{$m * 2};
+    @include md {
+        margin-left: #{$m-m * 2};
+    }
+    @include xs {
+        margin-left: 0;
+        float: none;
+    }
+}
+
+._order-md-minus-1 {
+    @include md {
+        order: -1;
+    }
+}
+
+._color-dark {
+    color: $darkColor;
+}
+
+._color-light {
+    color: $lightColor;
+}
+
+._color-accent {
+    color: $accentColor;
 }
