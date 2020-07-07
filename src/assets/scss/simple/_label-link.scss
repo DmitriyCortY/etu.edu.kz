@@ -16,6 +16,19 @@
     }
 }
 
+.b-label-link_light {
+    & .b-label-link__content {
+        color: $lightColor;
+        @include line-light();
+        &:before {
+            background-image: none;
+        }
+    }
+    & .b-label-link__title {
+        color: $lightColor;
+    }
+}
+
 .b-label-link_fw-600 {
     & .b-label-link__content {
         font-weight: 600;

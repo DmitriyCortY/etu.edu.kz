@@ -648,6 +648,20 @@
     }
 }
 
+@mixin line-grad-opacity() {
+    position: relative;
+    @include p-l;
+    @include before() {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include bg-grad(175deg);
+        opacity: 0.3;
+    }
+}
+
 @mixin line-light() {
     position: relative;
     @include p-l;

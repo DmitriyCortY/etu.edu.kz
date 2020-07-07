@@ -37,6 +37,7 @@
     background-color: $darkColor;
     opacity: 0.1;
     margin-left: -0.5px;
+    transition: $t;
     &:nth-child(1) {
         animation: lines 2s linear infinite;
     }
@@ -88,6 +89,10 @@
             display: none;
         }
     }
+}
+
+.b-lines__line_light {
+    background-color: #ffffff;
 }
 
 @keyframes lines {

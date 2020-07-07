@@ -12,6 +12,10 @@
     @include line-grad;
 }
 
+.b-gray-box_line-opacity {
+    @include line-grad-opacity;
+}
+
 .b-gray-box_line-light {
     @include line-light;
 }

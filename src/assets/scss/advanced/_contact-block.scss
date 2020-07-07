@@ -45,7 +45,8 @@
 .b-contact-block__title {
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: 50%;
+    margin-right: 50%;
     @include sm {
         display: flex;
         align-items: center;

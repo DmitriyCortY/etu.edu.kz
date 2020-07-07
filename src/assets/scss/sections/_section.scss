@@ -149,3 +149,13 @@
         display: block;
     }
 }
+
+.b-section__pagination {
+    margin-top: 50px;
+    @include md {
+        margin-top: 40px;
+    }
+    @include xs {
+        margin-top: 30px;
+    }
+}

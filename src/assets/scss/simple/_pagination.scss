@@ -2,7 +2,7 @@
 
 .b-pagination__list {
     @include flex-row;
-    align-items: center;
+    @include flex-center;
 }
 
 .b-pagination__item {

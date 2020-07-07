@@ -1,5 +1,5 @@
 .b-footer {
-    @include bg-grad(160deg);
+    @include bg-grad(95deg);
     position: relative;
     z-index: 1;
     padding-top: 180px;
@@ -31,6 +31,7 @@
         width: 100%;
         background-color: $lightColor;
         opacity: 0.6;
+        mix-blend-mode: overlay;
     }
 }
 

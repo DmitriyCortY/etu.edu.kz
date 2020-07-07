@@ -1,0 +1,101 @@
+.b-file-input {
+    border: 1px solid $accentColor;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.b-file-input_q {
+    & .b-file-input__question {
+        @include flex-row;
+    }
+    & .b-file-input__input {
+        width: calc(100% - 20px - 10px);
+    }
+}
+
+.b-file-input_has-error {
+    border: 1px solid $redColor;
+    & .b-file-input__error {
+        display: block;
+        background-color: $redColor;
+    }
+    & .b-file-input__label {
+        color: $redColor;
+    }
+    &:after {
+        color: $redColor !important;
+    }
+    & .b-file-input__question {
+        color: $darkColor;
+        border-color: $darkColor;
+    }
+}
+
+.b-file-input_require {
+    &:after {
+        content: '*';
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: $accentColor;
+    }
+}
+
+.b-file-input__label {
+    padding: 2px 5px;
+    background-color: $grayColor;
+    display: inline-block;
+    @include fz(10px, 16px);
+    color: $accentColor;
+    font-weight: 500;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 20px;
+    transform: translate3d(-2px, -50%, 0);
+    transition: $t;
+}
+
+.b-file-input__input {
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: none;
+    background-color: transparent;
+    @include title-xs;
+    color: $darkColor;
+    transition: $t;
+    height: 30px;
+}
+
+.b-file-input__question {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $accentColor;
+    color: $accentColor;
+    @include fz(14px);
+    @include flex-center;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: $t;
+    display: none;
+}
+
+.b-file-input__error {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 5px 20px;
+    background-color: $accentColor;
+    color: $lightColor;
+    margin-bottom: -10px;
+    margin-top: 10px;
+    @include input-hint;
+    display: none;
+    transition: $t;
+}

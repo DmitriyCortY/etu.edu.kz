@@ -1,0 +1,69 @@
+.b-multilang {
+    position: relative;
+    user-select: none;
+    @include hover {
+        & .b-multilang__list {
+            opacity: 1;
+            pointer-events: fill;
+        }
+        & .b-multilang__current {
+            & span {
+                transform: rotate(180deg);
+                ;
+            }
+        }
+    }
+}
+
+.b-multilang__current {
+    border: 1px solid $lightColor;
+    cursor: pointer;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    @include button-text;
+    color: $lightColor;
+    @include flex-row;
+    @include flex-center;
+    & span {
+        transition: $t;
+        @include fz(20px);
+        display: block;
+        margin-left: 3px;
+    }
+}
+
+.b-multilang__list {
+    border: 1px solid $lightColor;
+    transform: translate3d(0, -1px, 0);
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    // 
+    transition: $t;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.b-multilang__item {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    @include button-text;
+    color: $lightColor;
+    text-align: center;
+    &:not(:last-child) {
+        // @include after {
+        //     position: absolute;
+        //     width: 60%;
+        //     height: 1px;
+        //     background-color: $lightColor;
+        //     top: 100%;
+        //     left: 20%;
+        // }
+        border-bottom: 1px solid $lightColor;
+    }
+}

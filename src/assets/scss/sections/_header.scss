@@ -1,7 +1,139 @@
-.b-header {}
+.b-header {
+    transition: $t;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    &.active_1 {
+        &:before {
+            width: 100% !important;
+        }
+        & .b-header__logo {
+            transform: translate3d(50%, 0, 0);
+        }
+    }
+    &.active_2 {
+        & .b-header__content-row {
+            height: calc(100vh - 100px);
+        }
+    }
+    &.active_3 {
+        & .b-header__menu {
+            opacity: 1;
+        }
+    }
+}
+
+.b-header_full {
+    &:before {
+        width: 100% !important;
+    }
+}
+
+.b-header_full-2 {
+    @include before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        @include bg-grad(95deg);
+        z-index: 1;
+        transition: $t;
+    }
+}
+
+.b-header_cover {
+    @include before {
+        position: absolute;
+        height: 100%;
+        width: calc(((100% - (20px / 3)) / 8) * 5);
+        top: 0;
+        right: 0;
+        @include bg-grad(95deg);
+        z-index: 1;
+        transition: $t;
+    }
+}
 
 .b-header__inner {
-    @include wrapper;
+    @include wrapper-full;
+    z-index: 2;
+    position: relative;
 }
 
 .b-header__content {}
+
+.b-header__main-row {
+    @include flex-row;
+    align-items: center;
+    @include row;
+    @include p-t;
+    @include p-b;
+    height: 100px;
+}
+
+.b-header__content-row {
+    height: 0;
+    transition: $t;
+    overflow: hidden;
+}
+
+.b-header__content-row-inner {
+    @include wrapper;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    @include flex-colm;
+}
+
+.b-header__menu {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: auto !important;
+    width: 100%;
+}
+
+.b-header__label-link {
+    width: calc((100% / 8) * 1);
+}
+
+.b-header__logo {
+    margin-left: calc((100% / 8) * 1);
+    margin-right: calc((100% / 8) * 1);
+    width: calc((100% / 8) * 1);
+    @include p;
+    transition: $t;
+}
+
+.b-header__nav {
+    @include p;
+    width: calc((100% / 8) * 3);
+    height: 50px;
+    @include flex-row;
+    align-items: center;
+}
+
+.b-header__go {
+    margin-right: 60px;
+    @include button-text;
+    color: $lightColor;
+    @include flex-row;
+    @include flex-center;
+    cursor: pointer;
+    @include hover {
+        opacity: 0.65;
+    }
+    & img {
+        margin-right: 5px;
+    }
+}
+
+.b-header__menu-trigger {
+    margin-right: 60px;
+}
+
+.b-header__multilang {
+    margin-left: auto;
+}

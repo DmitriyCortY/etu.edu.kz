@@ -1,0 +1,21 @@
+.b-main-soc-link-list {
+    display: inline-flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0;
+    top: calc(50% - (155px / 2));
+    z-index: 2;
+    padding-left: 20px;
+    @include xl {
+        padding-left: 60px;
+    }
+    @include laptop {
+        padding-left: 40px;
+    }
+    @include lg {
+        padding-left: 15px;
+    }
+    @include xs {
+        padding-right: 10px;
+    }
+}

@@ -1,4 +1,6 @@
-.b-breadcrumbs {}
+.b-breadcrumbs {
+    user-select: none;
+}
 
 .b-breadcrumbs__list {
     @include flex-row;
@@ -14,6 +16,7 @@
     color: $accentColor;
     &.disable {
         opacity: 0.2;
+        pointer-events: none;
     }
     &:first-child {
         padding-left: 0 !important;

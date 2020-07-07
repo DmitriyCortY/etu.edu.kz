@@ -4,19 +4,19 @@
 <script src="./assets/lib/jquery-3.3.1.min.js"></script>
 <script src="./assets/lib/fancybox/jquery.fancybox.min.js"></script>
 <script src="./assets/lib/slick-slider/slick.min.js"></script>
+<script src="./assets/lib/select2/select2.min.js"></script>
 
 <script src="./assets/js/main.js"></script>
 
 <script>
     jQuery(document).ready(function($) {
+        for (let i = 0; i < $('select').length; i++) {
+            $('select').eq(i).select2({
+                placeholder: $('select').eq(i).data('placeholder') ? $('select').eq(i).data('placeholder') : '',
+                allowClear: true
+            })
+        }
 
-        // var tabs = new TABS({
-        //     trigger: $('[data-tab-trigger]'), // jQuery.object
-        //     content: $('[data-tab-content]'), // jQuery.object
-        //     triggerClass: 'active', // srting
-        //     contentClass: 'open' // srting
-        // })
-        // tabs.init()
 
 
 
@@ -54,6 +54,23 @@
                         slidesToScroll: 1,
                         prevArrow: $('[data-solo-slider-arrow-prev]').eq(i),
                         nextArrow: $('[data-solo-slider-arrow-next]').eq(i)
+                    });
+                }
+            }
+            if ($('[data-c-slider-list]').length > 0) {
+                for (var i = 0; i < $('[data-c-slider-list]').length; i++) {
+                    $('[data-c-slider-list]').eq(i).slick({
+                        infinite: true,
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        prevArrow: $('[data-c-slider-arrow-prev]').eq(i),
+                        nextArrow: $('[data-c-slider-arrow-next]').eq(i),
+                        responsive: [{
+                            breakpoint: 560,
+                            settings: {
+                                slidesToShow: 3,
+                            }
+                        }]
                     });
                 }
             }

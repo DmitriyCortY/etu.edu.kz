@@ -1,0 +1,42 @@
+.b-menu-trigger {
+    user-select: none;
+    cursor: pointer;
+    & span {
+        text-transform: uppercase;
+        color: $lightColor;
+        @include button-text;
+        display: block;
+        margin-left: 10px;
+    }
+    @include flex-row;
+    @include flex-center;
+    &.active {
+        & .b-menu-trigger__line {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate3d(0, -5px, 0);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate3d(0, 5px, 0);
+            }
+        }
+    }
+}
+
+.b-menu-trigger__lines {
+    height: 20px;
+    width: 36px;
+    @include flex-colm;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b-menu-trigger__line {
+    transition: $t;
+    transform-origin: left center;
+    height: 2px;
+    width: 35px;
+    background-color: $lightColor;
+}
