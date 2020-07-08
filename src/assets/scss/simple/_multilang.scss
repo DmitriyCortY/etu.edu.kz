@@ -20,7 +20,8 @@
     cursor: pointer;
     padding: 12px 15px;
     text-transform: uppercase;
-    @include button-text;
+    @include fz(14px, 17px);
+    font-weight: 500;
     color: $lightColor;
     @include flex-row;
     @include flex-center;
@@ -29,6 +30,16 @@
         @include fz(20px);
         display: block;
         margin-left: 3px;
+    }
+    @include xl {
+        @include fz(12px, 17px);
+    }
+    @include to(610px) {
+        @include fz(10px, 17px);
+    }
+    @include md {
+        padding: 4px;
+        border: none;
     }
 }
 
@@ -65,5 +76,15 @@
         //     left: 20%;
         // }
         border-bottom: 1px solid $lightColor;
+    }
+    @include bg-grad(160deg);
+    @include xl {
+        @include fz(12px, 17px);
+    }
+    @include md {
+        padding: 4px;
+    }
+    @include to(610px) {
+        @include fz(10px, 17px);
     }
 }

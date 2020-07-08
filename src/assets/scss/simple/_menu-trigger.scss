@@ -4,39 +4,104 @@
     & span {
         text-transform: uppercase;
         color: $lightColor;
-        @include button-text;
+        @include fz(14px, 17px);
+        font-weight: 500;
         display: block;
         margin-left: 10px;
+        transition: $t;
+        overflow: hidden;
+        @include xl {
+            @include fz(12px, 17px);
+        }
+        @include to(880px) {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+        @include to(610px) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 7px;
+            @include fz(11px);
+        }
+        @include mobile {
+            font-weight: 300;
+        }
     }
     @include flex-row;
     @include flex-center;
     &.active {
-        & .b-menu-trigger__line {
-            &:nth-child(1) {
-                transform: rotate(45deg) translate3d(0, -5px, 0);
+        & .b-menu-trigger__lines {
+            transform: translate3d(100%, 0, 0);
+            & .b-menu-trigger__line {
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate3d(0, -5px, 0);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate3d(0, 5px, 0);
+                }
             }
-            &:nth-child(2) {
-                opacity: 0;
+            @include to(880px) {
+                transform: translate3d(-33%, 0, 0);
+                & .b-menu-trigger__line {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate3d(-15px, 10px, 0);
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate3d(-15px, -10px, 0);
+                    }
+                }
             }
-            &:nth-child(3) {
-                transform: rotate(-45deg) translate3d(0, 5px, 0);
+            @include to(610px) {
+                transform: translate3d(5px, 10px, 0);
+                & .b-menu-trigger__line {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate3d(-3px, 0, 0);
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate3d(-3px, 0, 0);
+                    }
+                }
             }
         }
+        & span {
+            opacity: 0;
+        }
+    }
+    @include to(880px) {
+        flex-direction: row-reverse;
+    }
+    @include to(610px) {
+        flex-direction: column;
     }
 }
 
 .b-menu-trigger__lines {
+    transition: $t;
     height: 20px;
     width: 36px;
     @include flex-colm;
     justify-content: space-between;
     align-items: center;
+    @include to(610px) {
+        height: 20px;
+        width: 32px;
+    }
+    @include to(426px) {
+        height: 14px;
+        width: 24px;
+    }
 }
 
 .b-menu-trigger__line {
     transition: $t;
     transform-origin: left center;
     height: 2px;
-    width: 35px;
+    width: 100%;
     background-color: $lightColor;
+    @include to(426px) {
+        height: 1px;
+    }
 }

@@ -10,18 +10,27 @@
             width: 100% !important;
         }
         & .b-header__logo {
-            transform: translate3d(50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
         }
     }
     &.active_2 {
         & .b-header__content-row {
             height: calc(100vh - 100px);
+            @include laptop {
+                height: calc(100vh - 80px);
+            }
+            @include xs {
+                height: calc(100vh - 60px);
+            }
         }
     }
     &.active_3 {
         & .b-header__menu {
             opacity: 1;
         }
+    }
+    @include laptop {
+        @include bg-grad(95deg);
     }
 }
 
@@ -41,6 +50,18 @@
         @include bg-grad(95deg);
         z-index: 1;
         transition: $t;
+        @include laptop {
+            width: 0px;
+        }
+        @include to(880px) {
+            width: 115px;
+        }
+        @include to(610px) {
+            width: 62px;
+        }
+    }
+    & .b-header__logo {
+        transform: translate3d(-50%, 0, 0);
     }
 }
 
@@ -54,6 +75,15 @@
         @include bg-grad(95deg);
         z-index: 1;
         transition: $t;
+        @include laptop {
+            width: 0px;
+        }
+        @include to(880px) {
+            width: 115px;
+        }
+        @include to(610px) {
+            width: 62px;
+        }
     }
 }
 
@@ -69,9 +99,15 @@
     @include flex-row;
     align-items: center;
     @include row;
-    @include p-t;
-    @include p-b;
+    padding: 20px 0;
     height: 100px;
+    @include laptop {
+        height: 80px;
+        padding: 10px 0;
+    }
+    @include xs {
+        height: 60px;
+    }
 }
 
 .b-header__content-row {
@@ -97,43 +133,136 @@
 
 .b-header__label-link {
     width: calc((100% / 8) * 1);
+    @include xl {
+        width: calc((100% / 6) * 1);
+    }
+    @include to(880px) {
+        display: none;
+    }
 }
 
 .b-header__logo {
-    margin-left: calc((100% / 8) * 1);
-    margin-right: calc((100% / 8) * 1);
-    width: calc((100% / 8) * 1);
-    @include p;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100px;
+    transform: translate3d(calc(-50% - 100px), 0, 0);
     transition: $t;
-}
-
-.b-header__nav {
-    @include p;
-    width: calc((100% / 8) * 3);
-    height: 50px;
     @include flex-row;
-    align-items: center;
+    @include flex-center;
+    @include to(1760px) {
+        transform: translate3d(-50%, 0, 0);
+    }
+    @include laptop {
+        height: 80px;
+    }
+    @include xs {
+        height: 60px;
+    }
+    @include to(426px) {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: auto;
+        order: 1;
+        transform: none !important;
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
 }
 
 .b-header__go {
     margin-right: 60px;
-    @include button-text;
+    font-weight: 500;
+    @include fz(14px, 17px);
     color: $lightColor;
     @include flex-row;
     @include flex-center;
     cursor: pointer;
+    margin-left: auto;
     @include hover {
         opacity: 0.65;
     }
     & img {
         margin-right: 5px;
     }
+    @include laptop {
+        margin-right: 25px;
+        @include fz(12px, 17px);
+    }
+    @include to(880px) {
+        order: 2;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    @include to(610px) {
+        order: 1;
+        @include fz(10px, 17px);
+    }
+    @include to(426px) {
+        & img {
+            display: none;
+        }
+        order: 2;
+        margin-right: 6px;
+    }
+    @include to(390px) {
+        width: 100px;
+    }
 }
 
 .b-header__menu-trigger {
     margin-right: 60px;
+    @include laptop {
+        margin-right: 25px;
+    }
+    @include to(880px) {
+        margin-right: 0;
+        order: 4;
+    }
+    @include to(610px) {
+        order: 4;
+    }
+    @include to(426px) {
+        order: 5;
+    }
 }
 
 .b-header__multilang {
-    margin-left: auto;
+    margin-left: 100px;
+    @include xl {
+        margin-left: 0;
+    }
+    @include to(880px) {
+        order: 1;
+    }
+    @include to(610px) {
+        order: 2;
+    }
+    @include to(426px) {
+        order: 4;
+        margin-right: 15px;
+    }
+}
+
+.b-header__callback {
+    order: 3;
+    @include fz(28px);
+    color: $lightColor;
+    padding: 0 12px;
+    margin-right: 10px;
+    display: none;
+    @include to(880px) {
+        display: block;
+    }
+    @include xs {
+        order: 3;
+    }
+    @include to(610px) {
+        order: 3;
+        @include fz(22px);
+    }
+    @include to(426px) {
+        order: 3;
+    }
 }
