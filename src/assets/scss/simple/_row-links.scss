@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.b-row-links_flex-end {
+    align-items: flex-end;
+}
+
 .b-row-links_3 {
     & .b-row-link {
         max-width: calc(100% / 3);
