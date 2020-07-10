@@ -1,31 +1,31 @@
 .b-title-m {
-    @include title-m();
-    & img {
-        margin-right: 10px;
-    }
+  @include title-m();
+  & img {
+    margin-right: 10px;
+  }
 }
 
 .b-title-m_inline {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .b-title-m_line {
-    @include line-grad();
+  @include line-grad();
 }
 
 .b-title-m_dark {
-    color: $darkColor;
+  color: $darkColor;
 }
 
 .b-title-m_light {
-    color: $lightColor;
-    font-weight: 200;
+  color: $lightColor;
+  font-weight: 200;
 }
 
 .b-title-m_accent {
-    color: $accentColor;
+  color: $accentColor;
 }
 
 .b-title-m span {
-    @include inh;
+  @include inh;
 }

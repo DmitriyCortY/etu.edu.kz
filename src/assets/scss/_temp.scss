@@ -1,951 +1,958 @@
 .b-row {
-    @include flex-row;
-    @include row;
-    &:not(:last-child) {
-        margin-bottom: 20px;
-        @include md {
-            margin-bottom: 15px;
-        }
-        @include xs {
-            margin-bottom: 10px;
-        }
+  @include flex-row;
+  @include row;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+    @include md {
+      margin-bottom: 15px;
     }
-    position: relative;
+    @include xs {
+      margin-bottom: 10px;
+    }
+  }
+  position: relative;
 }
 
 .b-row_ai-center {
-    align-items: center;
+  align-items: center;
 }
 
 .b-row_jc-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .b-row_p {
-    @include p;
+  @include p;
 }
 
 .b-row_p-l {
-    @include p-l;
+  @include p-l;
 }
 
 .b-row_p-r {
-    @include p-r;
+  @include p-r;
 }
 
 .b-row_flex-center {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .b-row_flex-ai-center {
-    align-items: center;
+  align-items: center;
 }
 
 .b-row_flex-ai-start {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .b-row_flex-ai-end {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .b-row_flex-jc-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .b-row_flex-jc-start {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .b-row_flex-jc-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .b-row_reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .b-row_xl-reverse {
-    @include xl {
-        flex-direction: row-reverse;
-    }
+  @include xl {
+    flex-direction: row-reverse;
+  }
 }
 
 .b-row_laptop-reverse {
-    @include laptop {
-        flex-direction: row-reverse;
-    }
+  @include laptop {
+    flex-direction: row-reverse;
+  }
 }
 
 .b-row_lg-reverse {
-    @include lg {
-        flex-direction: row-reverse;
-    }
+  @include lg {
+    flex-direction: row-reverse;
+  }
 }
 
 .b-row_md-reverse {
-    @include md {
-        flex-direction: row-reverse;
-    }
+  @include md {
+    flex-direction: row-reverse;
+  }
 }
 
 .b-row_sm-reverse {
-    @include sm {
-        flex-direction: row-reverse;
-    }
+  @include sm {
+    flex-direction: row-reverse;
+  }
 }
 
 .b-row_xs-reverse {
-    @include xs {
-        flex-direction: row-reverse;
-    }
+  @include xs {
+    flex-direction: row-reverse;
+  }
 }
 
 .b-row_mobile-reverse {
-    @include mobile {
-        flex-direction: row-reverse;
-    }
+  @include mobile {
+    flex-direction: row-reverse;
+  }
 }
 
 .b-row_non-reverse {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .b-row_xl-non-reverse {
-    @include xl {
-        flex-direction: row;
-    }
+  @include xl {
+    flex-direction: row;
+  }
 }
 
 .b-row_laptop-non-reverse {
-    @include laptop {
-        flex-direction: row;
-    }
+  @include laptop {
+    flex-direction: row;
+  }
 }
 
 .b-row_lg-non-reverse {
-    @include lg {
-        flex-direction: row;
-    }
+  @include lg {
+    flex-direction: row;
+  }
 }
 
 .b-row_md-non-reverse {
-    @include md {
-        flex-direction: row;
-    }
+  @include md {
+    flex-direction: row;
+  }
 }
 
 .b-row_sm-non-reverse {
-    @include sm {
-        flex-direction: row;
-    }
+  @include sm {
+    flex-direction: row;
+  }
 }
 
 .b-row_xs-non-reverse {
-    @include xs {
-        flex-direction: row;
-    }
+  @include xs {
+    flex-direction: row;
+  }
 }
 
 .b-row_mobile-non-reverse {
-    @include mobile {
-        flex-direction: row;
-    }
+  @include mobile {
+    flex-direction: row;
+  }
 }
 
-.b-col {}
+.b-col {
+}
 
 .b-col_p-full {
-    @include p-full;
+  @include p-full;
 }
 
 .b-col_p {
-    @include p;
+  @include p;
 }
 
 .b-col_p-l {
-    @include p-l;
+  @include p-l;
 }
 
 .b-col_p-r {
-    @include p-r
+  @include p-r;
 }
 
 .b-col_p-t {
-    @include p-t;
+  @include p-t;
 }
 
 .b-col_p-b {
-    @include p-b
+  @include p-b;
 }
 
 .b-col_6 {
-    @include col(6);
+  @include col(6);
 }
 
 .b-col_5 {
-    @include col(5);
+  @include col(5);
 }
 
 .b-col_4 {
-    @include col(4);
+  @include col(4);
 }
 
 .b-col_3 {
-    @include col(3);
+  @include col(3);
 }
 
 .b-col_2 {
-    @include col(2);
+  @include col(2);
 }
 
 .b-col_1 {
-    @include col(1);
+  @include col(1);
 }
 
 .b-col_0 {
-    @media screen and (min-width: $br1600) {
-        display: none;
-    }
+  @media screen and (min-width: $br1600) {
+    display: none;
+  }
 }
 
-// 
+//
 // xl max-6
-// 
+//
 .b-col_xl-6 {
-    @include col-xl(6);
+  @include col-xl(6);
 }
 
 .b-col_xl-5 {
-    @include col-xl(5);
+  @include col-xl(5);
 }
 
 .b-col_xl-4 {
-    @include col-xl(4);
+  @include col-xl(4);
 }
 
 .b-col_xl-3 {
-    @include col-xl(3);
+  @include col-xl(3);
 }
 
 .b-col_xl-2 {
-    @include col-xl(2);
+  @include col-xl(2);
 }
 
 .b-col_xl-1 {
-    @include col-xl(1);
+  @include col-xl(1);
 }
 
 .b-col_xl-0 {
-    @media screen and (max-width: $br1600) and (min-width: $br1440) {
-        display: none;
-    }
+  @media screen and (max-width: $br1600) and (min-width: $br1440) {
+    display: none;
+  }
 }
 
-// 
+//
 // laptop max-6
-// 
+//
 .b-col_laptop-6 {
-    @include col-laptop(6);
+  @include col-laptop(6);
 }
 
 .b-col_laptop-5 {
-    @include col-laptop(5);
+  @include col-laptop(5);
 }
 
 .b-col_laptop-4 {
-    @include col-laptop(4);
+  @include col-laptop(4);
 }
 
 .b-col_laptop-3 {
-    @include col-laptop(3);
+  @include col-laptop(3);
 }
 
 .b-col_laptop-2 {
-    @include col-laptop(2);
+  @include col-laptop(2);
 }
 
 .b-col_laptop-1 {
-    @include col-laptop(1);
+  @include col-laptop(1);
 }
 
 .b-col_laptop-0 {
-    @media screen and (max-width: $br1440) and (min-width: $br1170) {
-        display: none;
-    }
+  @media screen and (max-width: $br1440) and (min-width: $br1170) {
+    display: none;
+  }
 }
 
-// 
+//
 // lg max-6
-// 
+//
 .b-col_lg-6 {
-    @include col-lg(6);
+  @include col-lg(6);
 }
 
 .b-col_lg-5 {
-    @include col-lg(5);
+  @include col-lg(5);
 }
 
 .b-col_lg-4 {
-    @include col-lg(4);
+  @include col-lg(4);
 }
 
 .b-col_lg-3 {
-    @include col-lg(3);
+  @include col-lg(3);
 }
 
 .b-col_lg-2 {
-    @include col-lg(2);
+  @include col-lg(2);
 }
 
 .b-col_lg-1 {
-    @include col-lg(1);
+  @include col-lg(1);
 }
 
 .b-col_lg-0 {
-    @media screen and (max-width: $br1170) and (min-width: $br960) {
-        display: none;
-    }
+  @media screen and (max-width: $br1170) and (min-width: $br960) {
+    display: none;
+  }
 }
 
-// 
+//
 // md - max-4
-// 
+//
 .b-col_md-4 {
-    @include col-md(4);
+  @include col-md(4);
 }
 
 .b-col_md-3 {
-    @include col-md(3);
+  @include col-md(3);
 }
 
 .b-col_md-2 {
-    @include col-md(2);
+  @include col-md(2);
 }
 
 .b-col_md-1 {
-    @include col-md(1);
+  @include col-md(1);
 }
 
 .b-col_md-0 {
-    @media screen and (max-width: $br960) and (min-width: $br780) {
-        display: none;
-    }
+  @media screen and (max-width: $br960) and (min-width: $br780) {
+    display: none;
+  }
 }
 
-// 
+//
 // sm - max-4
-// 
+//
 .b-col_sm-4 {
-    @include col-sm(4);
+  @include col-sm(4);
 }
 
 .b-col_sm-3 {
-    @include col-sm(3);
+  @include col-sm(3);
 }
 
 .b-col_sm-2 {
-    @include col-sm(2);
+  @include col-sm(2);
 }
 
 .b-col_sm-1 {
-    @include col-sm(1);
+  @include col-sm(1);
 }
 
 .b-col_sm-0 {
-    @media screen and (max-width: $br780) and (min-width: $br560) {
-        display: none;
-    }
+  @media screen and (max-width: $br780) and (min-width: $br560) {
+    display: none;
+  }
 }
 
-// 
+//
 // xs - max-2
-// 
+//
 .b-col_xs-2 {
-    @include col-xs(2);
+  @include col-xs(2);
 }
 
 .b-col_xs-1 {
-    @include col-xs(1);
+  @include col-xs(1);
 }
 
 .b-col_xs-0 {
-    @media screen and (max-width: $br560) and (min-width: $br440) {
-        display: none;
-    }
+  @media screen and (max-width: $br560) and (min-width: $br440) {
+    display: none;
+  }
 }
 
-// 
+//
 // xs - max-2
-// 
+//
 .b-col_mobile-2 {
-    @include col-mobile(2);
+  @include col-mobile(2);
 }
 
 .b-col_mobile-1 {
-    @include col-mobile(1);
+  @include col-mobile(1);
 }
 
 .b-col_mobile-0 {
-    @include mobile {
-        display: none;
-    }
+  @include mobile {
+    display: none;
+  }
 }
 
 .b-col_flex-row {
-    @include flex-row;
+  @include flex-row;
 }
 
 .b-col_flex-colm {
-    @include flex-colm;
+  @include flex-colm;
 }
 
 .b-col_flex-center {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .b-col_flex-ai-center {
-    align-items: center;
+  align-items: center;
 }
 
 .b-col_flex-ai-start {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .b-col_flex-ai-end {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .b-col_flex-jc-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .b-col_flex-jc-start {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .b-col_flex-jc-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .b-col_flex-jc-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .b-col_p-big {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    @include md {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    @include xs {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @include md {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include xs {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .b-col_sm-order-minus-1 {
-    @include sm {
-        order: -1;
-    }
+  @include sm {
+    order: -1;
+  }
 }
 
 .b-col_md-order-minus-1 {
-    @include md {
-        order: -1;
-    }
+  @include md {
+    order: -1;
+  }
 }
 
 .b-col_relative {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .b-col_xl-relative {
-    @include xl {
-        position: relative;
-        z-index: 1;
-    }
+  @include xl {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col_laptop-relative {
-    @include laptop {
-        position: relative;
-        z-index: 1;
-    }
+  @include laptop {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col_lg-relative {
-    @include lg {
-        position: relative;
-        z-index: 1;
-    }
+  @include lg {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col_md-relative {
-    @include md {
-        position: relative;
-        z-index: 1;
-    }
+  @include md {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col_sm-relative {
-    @include sm {
-        position: relative;
-        z-index: 1;
-    }
+  @include sm {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col_xs-relative {
-    @include xs {
-        position: relative;
-        z-index: 1;
-    }
+  @include xs {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col_mobile-relative {
-    @include mobile {
-        position: relative;
-        z-index: 1;
-    }
+  @include mobile {
+    position: relative;
+    z-index: 1;
+  }
 }
 
-// 
-// 
-// 
-// 
-// 
-.b-col-b {}
+//
+//
+//
+//
+//
+.b-col-b {
+}
 
 .b-col-b_p-full {
-    @include p-full;
+  @include p-full;
 }
 
 .b-col-b_p {
-    @include p;
+  @include p;
 }
 
 .b-col-b_p-l {
-    @include p-l;
+  @include p-l;
 }
 
 .b-col-b_p-r {
-    @include p-r
+  @include p-r;
 }
 
 .b-col-b_p-t {
-    @include p-t;
+  @include p-t;
 }
 
 .b-col-b_p-b {
-    @include p-b
+  @include p-b;
 }
 
 .b-col-b_8 {
-    @include col-b(8);
+  @include col-b(8);
 }
 
 .b-col-b_7 {
-    @include col-b(77);
+  @include col-b(77);
 }
 
 .b-col-b_6 {
-    @include col-b(6);
+  @include col-b(6);
 }
 
 .b-col-b_5 {
-    @include col-b(5);
+  @include col-b(5);
 }
 
 .b-col-b_4 {
-    @include col-b(4);
+  @include col-b(4);
 }
 
 .b-col-b_3 {
-    @include col-b(3);
+  @include col-b(3);
 }
 
 .b-col-b_2 {
-    @include col-b(2);
+  @include col-b(2);
 }
 
 .b-col-b_1 {
-    @include col-b(1);
+  @include col-b(1);
 }
 
 .b-col-b_0 {
-    @media screen and (min-width: $br1600) {
-        display: none;
-    }
+  @media screen and (min-width: $br1600) {
+    display: none;
+  }
 }
 
-// 
+//
 // xl max-6
-// 
+//
 .b-col-b_xl-6 {
-    @include col-b-xl(6);
+  @include col-b-xl(6);
 }
 
 .b-col-b_xl-5 {
-    @include col-b-xl(5);
+  @include col-b-xl(5);
 }
 
 .b-col-b_xl-4 {
-    @include col-b-xl(4);
+  @include col-b-xl(4);
 }
 
 .b-col-b_xl-3 {
-    @include col-b-xl(3);
+  @include col-b-xl(3);
 }
 
 .b-col-b_xl-2 {
-    @include col-b-xl(2);
+  @include col-b-xl(2);
 }
 
 .b-col-b_xl-1 {
-    @include col-b-xl(1);
+  @include col-b-xl(1);
 }
 
 .b-col-b_xl-0 {
-    @media screen and (max-width: $br1600) and (min-width: $br1440) {
-        display: none;
-    }
+  @media screen and (max-width: $br1600) and (min-width: $br1440) {
+    display: none;
+  }
 }
 
-// 
+//
 // laptop max-6
-// 
+//
 .b-col-b_laptop-6 {
-    @include col-b-laptop(6);
+  @include col-b-laptop(6);
 }
 
 .b-col-b_laptop-5 {
-    @include col-b-laptop(5);
+  @include col-b-laptop(5);
 }
 
 .b-col-b_laptop-4 {
-    @include col-b-laptop(4);
+  @include col-b-laptop(4);
 }
 
 .b-col-b_laptop-3 {
-    @include col-b-laptop(3);
+  @include col-b-laptop(3);
 }
 
 .b-col-b_laptop-2 {
-    @include col-b-laptop(2);
+  @include col-b-laptop(2);
 }
 
 .b-col-b_laptop-1 {
-    @include col-b-laptop(1);
+  @include col-b-laptop(1);
 }
 
 .b-col-b_laptop-0 {
-    @media screen and (max-width: $br1440) and (min-width: $br1170) {
-        display: none;
-    }
+  @media screen and (max-width: $br1440) and (min-width: $br1170) {
+    display: none;
+  }
 }
 
-// 
+//
 // lg max-6
-// 
+//
 .b-col-b_lg-6 {
-    @include col-b-lg(6);
+  @include col-b-lg(6);
 }
 
 .b-col-b_lg-5 {
-    @include col-b-lg(5);
+  @include col-b-lg(5);
 }
 
 .b-col-b_lg-4 {
-    @include col-b-lg(4);
+  @include col-b-lg(4);
 }
 
 .b-col-b_lg-3 {
-    @include col-b-lg(3);
+  @include col-b-lg(3);
 }
 
 .b-col-b_lg-2 {
-    @include col-b-lg(2);
+  @include col-b-lg(2);
 }
 
 .b-col-b_lg-1 {
-    @include col-b-lg(1);
+  @include col-b-lg(1);
 }
 
 .b-col-b_lg-0 {
-    @media screen and (max-width: $br1170) and (min-width: $br960) {
-        display: none;
-    }
+  @media screen and (max-width: $br1170) and (min-width: $br960) {
+    display: none;
+  }
 }
 
-// 
+//
 // md - max-4
-// 
+//
 .b-col-b_md-4 {
-    @include col-b-md(4);
+  @include col-b-md(4);
 }
 
 .b-col-b_md-3 {
-    @include col-b-md(3);
+  @include col-b-md(3);
 }
 
 .b-col-b_md-2 {
-    @include col-b-md(2);
+  @include col-b-md(2);
 }
 
 .b-col-b_md-1 {
-    @include col-b-md(1);
+  @include col-b-md(1);
 }
 
 .b-col-b_md-0 {
-    @media screen and (max-width: $br960) and (min-width: $br780) {
-        display: none;
-    }
+  @media screen and (max-width: $br960) and (min-width: $br780) {
+    display: none;
+  }
 }
 
-// 
+//
 // sm - max-4
-// 
+//
 .b-col-b_sm-4 {
-    @include col-b-sm(4);
+  @include col-b-sm(4);
 }
 
 .b-col-b_sm-3 {
-    @include col-b-sm(3);
+  @include col-b-sm(3);
 }
 
 .b-col-b_sm-2 {
-    @include col-b-sm(2);
+  @include col-b-sm(2);
 }
 
 .b-col-b_sm-1 {
-    @include col-b-sm(1);
+  @include col-b-sm(1);
 }
 
 .b-col-b_sm-0 {
-    @media screen and (max-width: $br780) and (min-width: $br560) {
-        display: none;
-    }
+  @media screen and (max-width: $br780) and (min-width: $br560) {
+    display: none;
+  }
 }
 
-// 
+//
 // xs - max-2
-// 
+//
 .b-col-b_xs-2 {
-    @include col-b-xs(2);
+  @include col-b-xs(2);
 }
 
 .b-col-b_xs-1 {
-    @include col-b-xs(1);
+  @include col-b-xs(1);
 }
 
 .b-col-b_xs-0 {
-    @media screen and (max-width: $br560) and (min-width: $br440) {
-        display: none;
-    }
+  @media screen and (max-width: $br560) and (min-width: $br440) {
+    display: none;
+  }
 }
 
-// 
+//
 // xs - max-2
-// 
+//
 .b-col-b_mobile-2 {
-    @include col-b-mobile(2);
+  @include col-b-mobile(2);
 }
 
 .b-col-b_mobile-1 {
-    @include col-b-mobile(1);
+  @include col-b-mobile(1);
 }
 
 .b-col-b_mobile-0 {
-    @include mobile {
-        display: none;
-    }
+  @include mobile {
+    display: none;
+  }
 }
 
 .b-col-b_flex-row {
-    @include flex-row;
+  @include flex-row;
 }
 
 .b-col-b_flex-colm {
-    @include flex-colm;
+  @include flex-colm;
 }
 
 .b-col-b_flex-center {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .b-col-b_flex-ai-center {
-    align-items: center;
+  align-items: center;
 }
 
 .b-col-b_flex-ai-start {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .b-col-b_flex-ai-end {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .b-col-b_flex-jc-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .b-col-b_flex-jc-start {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .b-col-b_flex-jc-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .b-col-b_p-big {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    @include md {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    @include xs {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @include md {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include xs {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .b-col-b_sm-order-minus-1 {
-    @include sm {
-        order: -1;
-    }
+  @include sm {
+    order: -1;
+  }
 }
-
+.b-col-b_xl-order-minus-1 {
+  @include xl {
+    order: -1;
+  }
+}
 .b-col-b_md-order-minus-1 {
-    @include md {
-        order: -1;
-    }
+  @include md {
+    order: -1;
+  }
 }
 
 .b-col-b_relative {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .b-col-b_xl-relative {
-    @include xl {
-        position: relative;
-        z-index: 1;
-    }
+  @include xl {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col-b_laptop-relative {
-    @include laptop {
-        position: relative;
-        z-index: 1;
-    }
+  @include laptop {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col-b_lg-relative {
-    @include lg {
-        position: relative;
-        z-index: 1;
-    }
+  @include lg {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col-b_md-relative {
-    @include md {
-        position: relative;
-        z-index: 1;
-    }
+  @include md {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col-b_sm-relative {
-    @include sm {
-        position: relative;
-        z-index: 1;
-    }
+  @include sm {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col-b_xs-relative {
-    @include xs {
-        position: relative;
-        z-index: 1;
-    }
+  @include xs {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .b-col-b_mobile-relative {
-    @include mobile {
-        position: relative;
-        z-index: 1;
-    }
+  @include mobile {
+    position: relative;
+    z-index: 1;
+  }
 }
 
-// 
-// 
-// 
-// 
-// 
-// 
+//
+//
+//
+//
+//
+//
 .b-col_absolute {
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 }
 
 .b-col_bottom-right {
-    bottom: 0;
-    right: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .b-col_top-right {
-    top: 0;
-    right: 0;
+  top: 0;
+  right: 0;
 }
 
 .b-col_bottom-left {
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .b-col_top-left {
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 }
 
-.b-col-inner {}
+.b-col-inner {
+}
 
 .b-col-inner_h-100 {
-    height: 100%;
+  height: 100%;
 }
 
 .b-col-inner_full {
-    @include inner-full;
+  @include inner-full;
 }
 
 .b-col-inner_full-all {
-    @include inner-full-all;
+  @include inner-full-all;
 }
 
 .b-col-inner_left {
-    @include inner-left;
+  @include inner-left;
 }
 
 .b-col-inner_top {
-    @include inner-top;
+  @include inner-top;
 }
 
 .b-col-inner_bottom {
-    @include inner-bottom;
+  @include inner-bottom;
 }
 
 .b-col-inner_right {
-    @include inner-right;
+  @include inner-right;
 }
 
 .b-img {
-    max-width: 100%;
-    @include xs {
-        width: 100%;
-        display: block;
-    }
+  max-width: 100%;
+  @include xs {
+    width: 100%;
+    display: block;
+  }
 }

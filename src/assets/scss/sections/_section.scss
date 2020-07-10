@@ -1,165 +1,188 @@
 .b-section {
-    position: relative;
+  position: relative;
 }
 
 .b-section_bg-gray {
-    background-color: $grayColor;
+  background-color: $grayColor;
 }
 
-// 
-// 
+//
+//
 // modifications
 .b-section_p-l {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .b-section_p-m {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include md {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include xs {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .b-section_p-t-m {
-    padding-top: 70px;
+  padding-top: 70px;
+  @include md {
+    padding-top: 50px;
+  }
+  @include xs {
+    padding-top: 30px;
+  }
+}
+.b-section_p-b-m {
+  padding-bottom: 70px;
+  @include md {
+    padding-bottom: 50px;
+  }
+  @include xs {
+    padding-bottom: 30px;
+  }
 }
 
 .b-section_p-s {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 // modifications
-// 
-// 
+//
+//
 .b-section__inner {
-    position: relative;
-    @include wrapper;
+  position: relative;
+  @include wrapper;
 }
 
 .b-section__inner_bg-gray {
-    background-color: $grayColor;
+  background-color: $grayColor;
 }
 
 .b-section__inner-full {
-    position: relative;
-    @include wrapper-full;
+  position: relative;
+  @include wrapper-full;
 }
 
 .b-section__content {
-    position: relative;
+  position: relative;
 }
 
 .b-section__bg-etu {
-    max-width: calc(100% + #{$p * 2});
-    @include row;
-    position: absolute;
-    top: 50%;
-    transform: translate3d(0, -50%, 0);
+  max-width: calc(100% + #{$p * 2});
+  @include row;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
 }
 
 .b-section__title-section {
-    @include m-b;
+  @include m-b;
 }
 
 .b-section__about-university {
-    position: absolute;
-    width: calc(50% + 20px);
-    height: calc(100% - 40px);
-    left: -20px;
-    top: 20px;
-    background-color: $grayColor;
-    z-index: 0;
-    @include md {
-        width: calc(100% + 30px);
-        height: calc(100% - 30px);
-        left: -15px;
-        top: 15px;
-    }
-    @include sm {
-        display: none;
-    }
+  position: absolute;
+  width: calc(50% + 20px);
+  height: calc(100% - 40px);
+  left: -20px;
+  top: 20px;
+  background-color: $grayColor;
+  z-index: 0;
+  @include md {
+    width: calc(100% + 30px);
+    height: calc(100% - 30px);
+    left: -15px;
+    top: 15px;
+  }
+  @include sm {
+    display: none;
+  }
 }
 
 .b-section__title-sm {
-    @include m-b;
+  @include m-b;
 }
 
 .b-section__title-sm-m-t {
-    @include m-t;
+  @include m-t;
 }
 
 .b-section__ryk-ETU {
-    position: absolute;
-    width: calc((100% / 6) * 5 + 15px);
-    height: calc(100% - 40px);
-    left: -20px;
-    top: 20px;
-    background-color: $grayColor;
-    z-index: 0;
-    @include md {
-        display: none;
-    }
+  position: absolute;
+  width: calc((100% / 6) * 5 + 15px);
+  height: calc(100% - 40px);
+  left: -20px;
+  top: 20px;
+  background-color: $grayColor;
+  z-index: 0;
+  @include md {
+    display: none;
+  }
 }
 
 .b-section__ryk-ETU-big {
-    position: absolute;
-    width: calc((100% / 6) * 5 + 35px);
-    height: calc(100% - 40px);
-    left: -20px;
-    top: 20px;
-    background-color: $grayColor;
-    z-index: 0;
-    @include md {
-        display: none;
-    }
+  position: absolute;
+  width: calc((100% / 6) * 5 + 35px);
+  height: calc(100% - 40px);
+  left: -20px;
+  top: 20px;
+  background-color: $grayColor;
+  z-index: 0;
+  @include md {
+    display: none;
+  }
 }
 
 .b-section__full-grey-bg-in-line {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: calc(100% - 40px);
-    height: 100%;
-    background-color: $grayColor;
-    @include xl {
-        left: 60px;
-        width: calc(100% - 120px);
-    }
-    @include laptop {
-        left: 40px;
-        width: calc(100% - 80px);
-    }
-    @include lg {
-        left: 15px;
-        width: calc(100% - 30px);
-    }
-    @include xs {
-        left: 10px;
-        width: calc(100% - 20px);
-    }
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 100%;
+  background-color: $grayColor;
+  @include xl {
+    left: 60px;
+    width: calc(100% - 120px);
+  }
+  @include laptop {
+    left: 40px;
+    width: calc(100% - 80px);
+  }
+  @include lg {
+    left: 15px;
+    width: calc(100% - 30px);
+  }
+  @include xs {
+    left: 10px;
+    width: calc(100% - 20px);
+  }
 }
 
 .b-section__bg-image-sm {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.085;
-    background-size: cover;
-    background-position: center;
-    display: none;
-    @include sm {
-        display: block;
-    }
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.085;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  @include sm {
+    display: block;
+  }
 }
 
 .b-section__pagination {
-    margin-top: 50px;
-    @include md {
-        margin-top: 40px;
-    }
-    @include xs {
-        margin-top: 30px;
-    }
+  margin-top: 50px;
+  @include md {
+    margin-top: 40px;
+  }
+  @include xs {
+    margin-top: 30px;
+  }
 }

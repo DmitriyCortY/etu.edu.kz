@@ -91,27 +91,27 @@ var path = {
 
 // **********  Clean dist repository  **********
 
-gulp.task('rm-dist', function() {
+gulp.task('rm-dist', function () {
     return gulp.src('dist')
         .pipe(clean())
 });
 
 // ********** Localhost task **********
 
-gulp.task('webserver', function() {
+gulp.task('webserver', function () {
     browserSync(serverConfig);
 });
 
 // ********** Clean js for watcher **********
 
-gulp.task('clean-js', function() {
+gulp.task('clean-js', function () {
     return gulp.src(['src/assets/js/main.js', 'src/assets/js/main.js.map', 'dev/assets/js/main.js', 'dev/assets/js/main.js.map'])
         .pipe(clean())
 })
 
 // ********** Watch **********
 
-gulp.task('js', ['clean-js'], function() {
+gulp.task('js', ['clean-js'], function () {
     return gulp.src(path.watch.js)
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
@@ -122,14 +122,14 @@ gulp.task('js', ['clean-js'], function() {
         .pipe(browserSync.reload({ stream: true }));
 })
 
-gulp.task('html', function() {
+gulp.task('html', function () {
     gulp.src(path.src.html)
         .pipe(fileinclude())
         .pipe(gulp.dest(path.dev.html))
         .pipe(browserSync.reload({ stream: true }));
 })
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return gulp.src(path.src.scss)
         .pipe(sassGlob())
         .pipe(sourcemaps.init())
@@ -142,23 +142,23 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('font', function() {
+gulp.task('font', function () {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.dev.fonts))
 });
 
-gulp.task('lib', function() {
+gulp.task('lib', function () {
     gulp.src(path.src.lib)
         .pipe(gulp.dest(path.dev.lib))
 })
 
-gulp.task('img', function() {
+gulp.task('img', function () {
     gulp.src(path.src.img)
         .pipe(gulp.dest(path.dev.img))
         .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('default', ['webserver', 'html', 'font', 'lib', 'img', 'sass', 'js'], function() {
+gulp.task('default', ['webserver', 'html', 'font', 'lib', 'img', 'sass', 'js'], function () {
     gulp.watch(path.watch.scss, ['sass']);
     gulp.watch(path.watch.html, ['html']);
     gulp.watch(path.watch.js, ['js']);
@@ -168,14 +168,14 @@ gulp.task('default', ['webserver', 'html', 'font', 'lib', 'img', 'sass', 'js'], 
 
 // **********  Tasks for build project  **********
 
-gulp.task('build-html', function() {
+gulp.task('build-html', function () {
     gulp.src(path.src.html)
         // .pipe(htmlmin({collapseWhitespace: true}))	// Minification html  // Uncomment if you need compressed HTML
         .pipe(fileinclude())
         .pipe(gulp.dest(path.dist.html))
 });
 
-gulp.task('build-js', function() {
+gulp.task('build-js', function () {
     gulp.src('dev/assets/js/main.js') // Initialize sourcemap
         .pipe(babel({ // Change to prev version
             presets: ['env']
@@ -184,7 +184,7 @@ gulp.task('build-js', function() {
         .pipe(gulp.dest(path.dist.js))
 });
 
-gulp.task('build-css', function() {
+gulp.task('build-css', function () {
     gulp.src('dev/assets/css/main.css')
         .pipe(mediaGroup()) // Collect media queris together
         .pipe(autoprefixer()) // Add lib prefixes
@@ -192,7 +192,7 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest(path.dist.css))
 });
 
-gulp.task('build-img', function() {
+gulp.task('build-img', function () {
     gulp.src(path.src.img)
         .pipe(imgmin({ // Compretion image
             progressive: true,
@@ -203,12 +203,12 @@ gulp.task('build-img', function() {
         .pipe(gulp.dest(path.dist.img))
 });
 
-gulp.task('build-fonts', function() {
+gulp.task('build-fonts', function () {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.dist.fonts))
 });
 
-gulp.task('build-lib', function() {
+gulp.task('build-lib', function () {
     gulp.src(path.src.lib)
         .pipe(gulp.dest(path.dist.lib))
 })

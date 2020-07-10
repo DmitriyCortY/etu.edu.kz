@@ -1,29 +1,48 @@
 .b-select {
-    position: relative;
-    @include after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $accentColor;
+  position: relative;
+  min-height: 52px;
+  @include after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $accentColor;
+  }
+  @include before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $accentColor;
+  }
+  @include p;
+  & select {
+    width: 100%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include button-text;
+  }
+  // select2
+  & .select2-selection {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include button-text;
+    height: auto !important;
+    min-height: 28px;
+    & * {
+      @include inh;
     }
-    @include before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $accentColor;
+    & b {
+      top: 90% !important;
     }
-    @include p;
-    & select {
-        width: 100%;
-        padding: 0;
-        border: none;
-        cursor: pointer;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        @include button-text;
-    }
+  }
 }

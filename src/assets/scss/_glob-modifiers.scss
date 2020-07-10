@@ -1,195 +1,199 @@
 ._fw-100 {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 ._fw-200 {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 ._fw-300 {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 ._fw-400 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 ._fw-500 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 ._fw-600 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 ._fw-700 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 ._fw-800 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 ._fw-900 {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 ._ta-r {
-    text-align: right;
+  text-align: right;
 }
 
 ._ta-c {
-    text-align: center;
+  text-align: center;
 }
-
+._ta-from-xl-c {
+  @include from(1600px) {
+    text-align: center;
+  }
+}
 ._ta-j {
-    text-align: justify;
+  text-align: justify;
 }
 
 ._ttu {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 ._pa {
-    @include p-full;
+  @include p-full;
 }
 
 ._pa-l {
-    @include p-l;
+  @include p-l;
 }
 
 ._pa-r {
-    @include p-r;
+  @include p-r;
 }
 
 ._pa-t {
-    @include p-t;
+  @include p-t;
 }
 
 ._pa-b {
-    @include p-b;
+  @include p-b;
 }
 
 ._pa-big-t {
-    @include p-big-t;
+  @include p-big-t;
 }
 
 ._pa-big-b {
-    @include p-big-b;
+  @include p-big-b;
 }
 
 ._ma {
-    @include m-full;
+  @include m-full;
 }
 
 ._ma-l {
-    @include m-l;
+  @include m-l;
 }
 
 ._ma-r {
-    @include m-r;
+  @include m-r;
 }
 
 ._ma-t {
-    @include m-t;
+  @include m-t;
 }
 
 ._ma-b {
-    @include m-b;
+  @include m-b;
 }
 
 ._ma-t-a {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 ._ma-b-a {
-    margin-bottom: auto;
+  margin-bottom: auto;
 }
 
 ._ma-l-a {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 ._ma-r-a {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 ._w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 ._p-relative {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 ._certificat-bg {
+  position: relative;
+  @include before {
+    position: absolute;
+    width: calc(((100% / 4) * 5) + #{$p * 1.5});
+    height: 100%;
+    background-color: $grayColor;
+    top: 0;
+    left: calc(((100% / 4) * -2) - #{$p * 2});
+    z-index: 0;
+  }
+  & > * {
     position: relative;
+    z-index: 1;
+  }
+  @include md {
     @include before {
-        position: absolute;
-        width: calc(((100% / 4) * 5) + #{$p * 1.5});
-        height: 100%;
-        background-color: $grayColor;
-        top: 0;
-        left: calc(((100% / 4) * -2) - #{$p * 2});
-        z-index: 0;
+      width: calc(150% + #{$p-m});
+      left: calc(-50% + #{$p-m});
     }
-    &>* {
-        position: relative;
-        z-index: 1;
-    }
-    @include md {
-        @include before {
-            width: calc(150% + #{$p-m});
-            left: calc(-50% + #{$p-m});
-        }
-    }
+  }
 }
 
 ._al-l,
 .align-left {
-    float: left;
-    margin-right: #{$m * 2};
-    @include md {
-        margin-right: #{$m-m * 2};
-    }
-    @include xs {
-        margin-right: 0;
-        float: none;
-    }
+  float: left;
+  margin-right: #{$m * 2};
+  @include md {
+    margin-right: #{$m-m * 2};
+  }
+  @include xs {
+    margin-right: 0;
+    float: none;
+  }
 }
 
 ._al-r,
 .align-right {
-    float: right;
-    margin-left: #{$m * 2};
-    @include md {
-        margin-left: #{$m-m * 2};
-    }
-    @include xs {
-        margin-left: 0;
-        float: none;
-    }
+  float: right;
+  margin-left: #{$m * 2};
+  @include md {
+    margin-left: #{$m-m * 2};
+  }
+  @include xs {
+    margin-left: 0;
+    float: none;
+  }
 }
 
 ._order-md-minus-1 {
-    @include md {
-        order: -1;
-    }
+  @include md {
+    order: -1;
+  }
 }
 
 ._color-dark {
-    color: $darkColor;
+  color: $darkColor;
 }
 
 ._color-light {
-    color: $lightColor;
+  color: $lightColor;
 }
 
 ._color-accent {
-    color: $accentColor;
+  color: $accentColor;
 }
 
 ._ov-h {
-    overflow: hidden;
+  overflow: hidden;
 }

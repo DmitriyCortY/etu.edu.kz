@@ -1,11 +1,18 @@
-.b-cover-block {}
-
-.b-cover-block__inner {
-    background-color: #fafafa;
+.b-cover-block {
 }
 
-.b-cover-block__header {}
+.b-cover-block__inner {
+  background-color: #fafafa;
+  & img {
+    max-height: 58px;
+  }
+}
 
-.b-cover-block__main {}
+.b-cover-block__header {
+}
 
-.b-cover-block__footer {}
+.b-cover-block__main {
+}
+
+.b-cover-block__footer {
+}

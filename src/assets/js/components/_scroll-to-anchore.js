@@ -8,7 +8,7 @@ class Scroll_to_anchore {
     listener() {
         this.trigger.on('click', e => {
             let t = $(e.target)
-            if (t.attr('href').includes('#')) {
+            if (t.attr('href').includes('#') && t.attr('href').length > 1) {
                 e.preventDefault();
                 let name = $(e.target).attr('href').replace('#', '')
                 this.scroll_to(name)
