@@ -3,6 +3,7 @@
     padding: 10px 20px;
     display: block;
     width: 100%;
+    min-height: 52px;
     position: relative;
     & .select2-container--default .select2-selection--single {
         border: none;
@@ -13,6 +14,17 @@
         color: $darkColor;
         transition: $t;
     }
+    & .select2-selection__placeholder {
+        color: rgba($accentColor, 0.8) !important;
+    }
+    & .select2-container .select2-selection--single .select2-selection__rendered {
+        padding-left: 0 !important;
+    }
+}
+
+.b-field-2_disabled {
+    opacity: 0.2;
+    pointer-events: none;
 }
 
 .b-field-2_q {
@@ -77,6 +89,9 @@
     color: $darkColor;
     transition: $t;
     height: 30px;
+    &::placeholder {
+        color: rgba($accentColor, 0.8);
+    }
 }
 
 .b-field-2__question {

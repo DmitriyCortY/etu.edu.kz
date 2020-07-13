@@ -22,7 +22,7 @@ class Menu {
             }
         })
     }
-    async handler_click() {
+    handler_click() {
         $('body').toggleClass('_ov-h')
         if (!this.status) {
             this.trigger.toggleClass('active')

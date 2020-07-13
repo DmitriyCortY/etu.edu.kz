@@ -9,10 +9,11 @@
 <script src="./assets/js/main.js"></script>
 
 <script>
-    jQuery(document).ready(function ($) {
+    jQuery(document).ready(function($) {
         for (let i = 0; i < $('select').length; i++) {
+            let placeholder = $('select').eq(i).data('placeholder') ? $('select').eq(i).data('placeholder') : ''
             $('select').eq(i).select2({
-                placeholder: $('select').eq(i).data('placeholder') ? $('select').eq(i).data('placeholder') : '',
+                placeholder: placeholder,
                 allowClear: true
             })
         }
@@ -74,9 +75,21 @@
                     });
                 }
             }
+            if ($('[data-cover-slider-list]').length > 0) {
+                for (var i = 0; i < $('[data-cover-slider-list]').length; i++) {
+                    $('[data-cover-slider-list]').eq(i).slick({
+                        infinite: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        speed: 888,
+                        prevArrow: $('[data-cover-slider-arrow-prev]').eq(i),
+                        nextArrow: $('[data-cover-slider-arrow-next]').eq(i)
+                    });
+                }
+            }
         }
         initSliders()
-        // -- - Инициализация слайдеров slick - slider-- -
+            // -- - Инициализация слайдеров slick - slider-- -
     })
 </script>
 </body>
